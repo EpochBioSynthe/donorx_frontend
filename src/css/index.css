@@ -1,0 +1,91 @@
+:root{
+  --primary: #7a2b7a; /* purple */
+  --accent: #d998d9;  /* light pink */
+  --bg: #f6f3f7;
+  --muted: #777;
+}
+
+*{box-sizing:border-box}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: #222;
+  -webkit-font-smoothing:antialiased;
+}
+
+.app {
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+header.navbar {
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.nav-left {display:flex; align-items:center; gap:12px}
+.brand { font-weight:700 }
+.nav-links { display:flex; gap:16px; align-items:center}
+.nav-links a { color:#fff; text-decoration:none; font-weight:600; font-size:14px}
+.nav-actions button { background:transparent; border:1px solid rgba(255,255,255,0.3); color:#fff; padding:6px 12px; border-radius:6px; cursor:pointer;}
+
+.main-content {
+  flex:1;
+  padding:28px;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+/* Hero */
+.hero {
+  background: white;
+  border-radius:8px;
+  padding:24px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom:20px;
+  display:flex;
+  gap:20px;
+  align-items:center;
+  justify-content:space-between;
+}
+.hero .left {flex:1}
+.hero h1{ margin:0 0 12px 0; color:var(--primary)}
+.hero p{ margin:0 0 16px 0; color:var(--muted)}
+.hero .cta-group{ display:flex; gap:12px}
+.btn { background:var(--primary); color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer}
+.btn.secondary { background:transparent; border:2px solid var(--primary); color:var(--primary)}
+
+/* Form boxes */
+.form-box {
+  background:#fff; padding:18px; border-radius:6px; box-shadow:0 6px 12px rgba(0,0,0,0.04);
+  max-width:720px;
+  margin:12px 0;
+}
+.form-box label { display:block; font-size:13px; margin-bottom:6px; color:var(--muted)}
+.form-box input, .form-box textarea, .form-box select {
+  width:100%;
+  padding:10px 12px;
+  margin-bottom:12px;
+  border:1px solid #e6e6e6;
+  border-radius:6px;
+}
+
+/* Cards row */
+.card-row { display:flex; gap:14px; margin-top:12px; flex-wrap:wrap}
+.card { background:white; padding:12px; border-radius:8px; width:220px; box-shadow:0 6px 12px rgba(0,0,0,0.04)}
+
+/* Footer */
+footer.site-footer { background:#1b1b1b; color:#ddd; padding:18px; margin-top:18px; text-align:center}
+
+/* Responsive */
+@media (max-width:800px){
+  .hero { flex-direction:column; align-items:flex-start }
+  .nav-links{ display:none }
+  .main-content { padding:12px }
+}
