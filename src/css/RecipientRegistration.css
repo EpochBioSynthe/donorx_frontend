@@ -1,0 +1,126 @@
+/* RecipientRegistration.css */
+
+/* --- Variables (ප්‍රධාන වර්ණ RecipientRegistration.css තුළ නැවත නිර්වචනය නොකර, ඔබගේ App.css/index.css වෙතින් උරුම විය යුතුය. ) --- */
+/* ඔබගේ ප්‍රධාන CSS වලින් වර්ණ ගෙන ඇති බව උපකල්පනය කරමි:
+   --primary: #7a2b7a;
+   --bg: #f6f3f7; 
+   --muted: #777; 
+*/
+
+/* 1. Recipient Registration පිටුවේ ප්‍රධාන container එක */
+.recipient-registration-page {
+    /* ඔබගේ RecipientRegistration component එකේ ඇති
+       <div className="form-container" style={{maxWidth: 1000, margin: '0 auto'}}>
+       වෙනුවට මෙම පන්තිය භාවිතා කරන්න. 
+    */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* පෝරම මධ්‍යගත කිරීමට */
+    padding: 28px;
+    background: var(--bg, #f6f3f7); /* පොදු background එක */
+}
+
+/* 2. පොදු form box එක (Registration, Clinical, Matching සඳහා) */
+.form-box {
+    background: #E9C3E2!important;
+    padding: 24px; /* තරමක් වැඩි කළා */
+    border-radius: 8px; /* සුළු වටකුරු දාර */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* මදක් වැඩි කළ සෙවනැල්ල */
+    max-width: 450px; /* පෝරමයේ පළල සීමා කිරීම */
+    width: 130%;
+    margin-bottom: 24px;
+}
+
+.form-box h2 {
+    color: white;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    
+}
+
+.section-title{
+    font-size: 1.1rem;
+    font-weight: 540;
+    margin-bottom: 1.5rem;
+    color: white;
+    background-color: #D76CE6;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+/* 3. Input fields */
+.form-box label {
+    display: block;
+    font-size: 13px; /* තරමක් විශාල කළා */
+    margin-bottom: 4px;
+    color: black!important;
+    font-weight: 535;
+}
+
+.form-box input:not([type="checkbox"]), 
+.form-box textarea, 
+.form-box select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px; /* ඉන්පුට් අතර පරතරය */
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-size: 12px;
+    transition: border-color 0.3s;
+    
+}
+.file{
+    background-color: white;
+}
+
+.form-box input:focus, .form-box textarea:focus, .form-box select:focus {
+    border-color: var(--primary, #7a2b7a);
+    outline: none;
+}
+
+/* 4. Buttons */
+.btn {
+    background: #B03576 !important;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* බොත්තම් තරමක් විශාල කළා */
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Link එකක් තුළ තිබේ නම් */
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #6a216a; /* තද දම් පාට */
+}
+
+/* Matching and Consent Section Specific Styles */
+.form-box .terms-and-conditions {
+    margin-top: 15px;
+    padding: 10px 0;
+}
+.form-box .terms-and-conditions div {
+    display: flex;
+    align-items: center;
+}
+
+.form-box .terms-and-conditions input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-box .terms-and-conditions label {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* බොත්තම් දෙක එක පේලියේ තැබීමට */
+.form-box .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
