@@ -1,5 +1,6 @@
 /* src/css/RegistrationSuccess.css */
 
+
 /* සම්පූර්ණ පිටුවේ background එක */
 .registration-success-page {
     /* ඔබ කලින් පෙන්වූ light purple වර්ණයට සමාන වර්ණයක් */
@@ -10,6 +11,10 @@
     justify-content: center;
     align-items: center;
     border-radius: 40px;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    background-image: url('../assets/suscce_bi.png');
+
 }
 
 /* Success Box Container එක - White Box සහ Purple Shadow එක අඩංගු වේ */
