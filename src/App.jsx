@@ -13,6 +13,7 @@ import OrganSearch from "./pages/OrganSearch";
 import Feedback from "./pages/Feedback";
 import ContactUs from "./pages/ContactUs";
 import Profile from "./pages/Profile";
+import RegistrationSuccess from './pages/RegistrationSuccess';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/recipient-registration" element={<RecipientRegistration />} />
+            <Route path="/registration-success" element={<RegistrationSuccess />} />
             <Route path="/donation-record" element={<DonationRecord />} />
             <Route path="/organ-search" element={<OrganSearch />} />
             <Route path="/feedback" element={<Feedback />} />
