@@ -1,26 +1,87 @@
-import React, {useState} from "react";
+// src/pages/Feedback.jsx
+
+import React, { useState } from "react";
+import '../css/feedback.css'; 
 
 export default function Feedback(){
-  const [message, setMessage] = useState("");
-  const [email, setEmail] = useState("");
+    // ADD name and category to the state
+    const [data, setData] = useState({
+        name: "",       // NEW FIELD
+        email: "",
+        category: "",   // NEW FIELD
+        message: ""
+    });
 
-  function handleSubmit(e){
-    e.preventDefault();
-    alert("Thanks for your feedback!");
-  }
+    function handleChange(e){
+        const { name, value } = e.target;
+        setData({
+            ...data, 
+            [name]: value
+        });
+    }
 
-  return (
-    <div className="form-box">
-      <h2>Feedback</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Your email (optional)</label>
-        <input type="email" value={email} onChange={e=>setEmail(e.target.value)} />
+    function handleSubmit(e){
+        e.preventDefault();
+        alert("Thank you for your feedback! We have received your message.");
+        // Clear form after submission
+        setData({ name: "", email: "", category: "", message: "" });
+    }
 
-        <label>Message</label>
-        <textarea value={message} onChange={e=>setMessage(e.target.value)} rows="6" required />
+    return (
+        <div className="feedback-page container">
+            <form onSubmit={handleSubmit} className="feedback-form">
+                
+                <p className="form-description">
+                    <b><h2>Your thoughts matter to us—feel free to share your comments or questions</h2></b>
+                </p>
+                
+                <div className="form-box">
+                    {/* Changed h2 class for styling */}
+                    <h3 className="feedback-header">Feedback Form</h3>
 
-        <button className="btn" type="submit">Send feedback</button>
-      </form>
-    </div>
-  );
+                    {/* NEW: Name Field */}
+                    <label>Name</label>
+                    <input 
+                        name="name"
+                        type="text" 
+                        value={data.name} 
+                        onChange={handleChange}
+                        required
+                        placeholder="Enter your name"
+                    />
+
+                    <label>Email</label>
+                    <input 
+                        name="email"
+                        type="email" 
+                        value={data.email} 
+                        onChange={handleChange} 
+                        placeholder="Enter your email"
+                    />
+                    
+                    {/* NEW: Category Field */}
+                    <label>Category</label>
+                    <input 
+                        name="category"
+                        type="text" 
+                        value={data.category} 
+                        onChange={handleChange} 
+                        placeholder="e.g., General, Bug, Suggestion"
+                    />
+
+                    <label>Place your feedback here</label>
+                    <textarea 
+                        name="message"
+                        value={data.message} 
+                        onChange={handleChange} 
+                        rows="6" 
+                        required 
+                    />
+                    
+                    {/* Changed button text and class for styling */}
+                    <button className="btn submit-btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    );
 }
