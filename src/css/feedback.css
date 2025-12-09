@@ -1,0 +1,123 @@
+/* src/css/feedback.css */
+
+/* --- Primary Colors (Using your variables) --- */
+:root {
+   --primary: #6d008e;
+   --accent: #760476;
+   --muted: #6f6f6f;
+   --light-pink: #e8d0e8;
+}
+
+/* ---------------------------------------------------- */
+/* 1. Page Layout */
+/* ---------------------------------------------------- */
+
+.feedback-page {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    min-height:80vh;
+}
+
+/* Form Container */
+.feedback-form {
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}    
+
+.form-description {
+    text-align: center;
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------- */
+/* 2. Form Box and Header Styling (New Look) */
+/* ---------------------------------------------------- */
+
+/* The main form box now has a light pink background and large radius */
+.form-box {
+    background: var(--light-pink); /* Light pink background */
+    padding: 30px 40px; /* More padding */
+    border-radius: 20px; /* Highly rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+/* The header bar inside the form */
+.feedback-header {
+    background: #7a2b7a; /* Light purple/pink background */
+    color: white; /* White text */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: 700;
+    
+    /* Create the floating bar effect and rounded corners */
+    border-radius: 8px;
+    margin: 0 0 30px 0; /* Pull the header out of the padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------------------------------------------- */
+/* 3. Input Styling (Rounded Look) */
+/* ---------------------------------------------------- */
+
+label {
+    display: block;
+    margin-top:0;
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #333;
+    font-size: 20px;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    /* Set input/textarea to white background */
+    background: white;
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 15px;
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Highly rounded fields */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+    box-sizing: border-box; 
+    font-size: 18px;
+}
+
+textarea {
+    resize: vertical;
+    border-radiuS: 15px;
+}
+
+/* ---------------------------------------------------- */
+/* 4. Button Styling */
+/* ---------------------------------------------------- */
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btn.submit-btn {
+    /* Submit button styling */
+    background: var(--button-color); /* Darker pink for the button */
+    color: white;
+    border-radius: 25px; /* Highly rounded button */
+    float: right; 
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn.submit-btn:hover {
+    background: #7a287a; /* Darken on hover */
+    opacity: 1;  }
+
+  
