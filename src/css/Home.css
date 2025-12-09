@@ -1,6 +1,24 @@
+/* 1. Global Box-Sizing (වඩා හොඳ Layout පාලනයක් සඳහා) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Horizontal Overflow ඉවත් කිරීම (Vertical Scrollbar එක තබාගෙන) */
+body, html {
+    overflow-x: hidden;
+}
+
+/* Images වලට Global style එකක් එකතු කරන්න */
+img {
+    max-width: 100%; 
+    height: auto;
+    margin: 0;
+}
+
 /* Reusable helpers */
 .container {
-    max-width: 1100px;
+    /* පළල 958.4px ට ආසන්නව සකස් කළා */
+    max-width: 960px; 
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -17,12 +35,26 @@
 .hero-section {
     position: relative;
     padding: 20px 0 10px;
+    width: 100%;
+    min-height: 520px; /* Image එකට ඉඩ දීමට ප්‍රමාණවත් උසක් දෙන්න */
+    overflow: hidden; 
+}
+
+/* Hero Background Image (banner.png) */
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    display: flex; 
+    display: flex;	
     gap: 24px;
     align-items: center;
     padding-top: 36px;
@@ -33,8 +65,8 @@
     max-width: 640px;
     color: #fff;
     padding: 24px;
-    background: rgba(255,255,255,0.02); 
-    margin-left: 6%;
+    background: rgba(255,255,255,0.02);	
+    margin-left: 0; 
 }
 .hero-left h1 {
     font-size: 32px;
@@ -82,19 +114,34 @@
 }
 
 /* ABOUT SECTION */
+.about-section {
+    display: flex; 
+    gap: 30px;
+    align-items: center;
+    padding: 40px 0;
+}
+.about-left {
+    flex: 1; 
+}
 
+/* About Image (bannertwo.png) */
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 .about-right {
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(255, 255, 255, 0.9);	
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 450px; 
+    max-width: 450px;	
     margin-left: 5%;
 }
 
 .about-right h2 {
-    color: #5d4287; 
+    color: #5d4287;	
 }
 
 /* SERVICES */
@@ -122,9 +169,13 @@
     .hero-content { flex-direction:column; padding-top:12px; }
     .hero-left { margin:0; padding: 16px; }
     .hero-bg { height:240px }
-    .about-section{ 
+    .about-section{	
         flex-direction: column;
+        gap: 15px; 
         align-items: flex-start;
+    }
+    .about-left {
+        max-width: 100%;
     }
     .about-right {
         margin-left: 0;
