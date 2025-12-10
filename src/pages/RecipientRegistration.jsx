@@ -176,7 +176,7 @@ export default function RecipientRegistration(){
                     </div>
 
                     <div className="button-group">
-                         <button type="submit" className="btn">Register</button> 
+                         <button type="submit" className="btn-1">Register</button> 
                     </div>
                     </div>
                 </div>

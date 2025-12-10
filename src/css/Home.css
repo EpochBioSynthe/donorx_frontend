@@ -94,6 +94,7 @@ body, html {
     padding: 24px;
     background: rgba(255,255,255,0.02); 
     margin-left: 0; 
+    flex: 1;
 }
 .hero-left h1 {
     font-size: 32px;
@@ -106,24 +107,55 @@ body, html {
     margin-bottom: 16px;
     line-height: 1.4;
 }
+.hero-right {
+    /* Text එක සහ Buttons අඩංගු නව Container එක */
+    /* මෙමගින් Text සහ Buttons සිරස් අතට (Vertical) පෙළ ගැසෙයි */
+    flex: 1;
+    display: block; 
+    flex-direction: column;
+    text-align: left; 
+    padding-top: 180px; /* Buttons ටික Text එකට යටින් පිහිටීමට ඉහළින් ඉඩ දෙන්න */
+    padding-left: 20px; 
+    
+    /* ඔබගේ Image එකේ ඇති පරිදි, Hero Right එකට අවශ්‍ය styles මෙහිදී යෙදිය හැකියි */
+    color: white; 
+    max-width: none;  /* අවශ්‍ය නම් පළල සීමා කරන්න */
+     /* අවශ්‍ය නම් ටිකක් පහළට ගෙන ඒමට */
+    
+    /* ⚠️ මෙය Hero Content එක තුළ තිබිය යුතුය. */
+    position: relative; 
+    z-index: 3;
+    color: transparent;
+}
 
 /* CTA buttons */
-.cta-group { display:flex; gap:12px; flex-wrap:wrap; }
+.cta-group { 
+    display:flex; 
+    gap:4px; 
+    flex-wrap:wrap; 
+    
+    /* ⚡️⚡️ නිවැරදි කිරීම: Buttons ටික Text එකට යටින් තැබීමට margin-top දෙන්න ⚡️⚡️ */
+   margin-top: 250px /* Text එක සහ Buttons අතර පරතරය */
+}
 .btn {
+    
     padding: 10px 18px;
     border-radius: 22px;
     border: none;
     cursor: pointer;
     font-weight: 600;
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    margin-left: 30px;
+    
 }
 .btn.primary {
-    background: var(--primary);
+    background-color: #632B61;
     color: white;
+    border: 1px solid white;
 }
 .btn.outline {
-    background: transparent;
-    border: 2px solid white;
+     background-color: #632B61;;
+    border: 1px solid white;
     color: white;
 }
 
@@ -212,7 +244,8 @@ body, html {
 .section-title-h{ 
     font-size:40px; 
     margin-bottom:-165px; 
-    color:var(--muted); 
+    color:black; 
+    font-family: Arial, Helvetica, sans-serif;
     padding-top: 70px;
     letter-spacing:1px;
     padding-bottom: 250px;

@@ -29,14 +29,15 @@ export default function Home() {
     <div className="hero-content container">
         <div className="hero-left">
 
-            <div className="cta-group">
-                {/* Buttons using React Router's Link */}
-                <Link to="/signup"><button className="btn primary">REGISTER</button></Link>
-                <Link to="/donation-record"><button className="btn outline">Explore Donation Records</button></Link>
-            </div>
+            
         </div>
         
         <div className="hero-right">
+          <div className="cta-group">
+                {/* Buttons දැනටමත් මෙහි ඇත */}
+                <Link to="/signup"><button className="btn primary">REGISTER</button></Link>
+                <Link to="/donation-record"><button className="btn outline">Explore Donation Records</button></Link>
+            </div>
             {/* This div remains empty for layout padding/flex balancing */}
         </div>
     </div>
