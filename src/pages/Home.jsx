@@ -20,11 +20,11 @@ export default function Home() {
       {/* ========================================= */}
 {/* 1. HERO SECTION & CALL TO ACTION (WITH EMBEDDED IMAGE) */}
 {/* ========================================= */}
-<section className="hero-section">
+        <section className="hero-section">
     {/* NEW: Replaced the empty <div className="hero-bg" /> 
         with an actual <img> tag for the background image.
     */}
-    <img src="/assets/banner.png" alt="Hands holding a heart for organ donation" className="hero-bg-img" /> 
+            <img src="/assets/banner.png" alt="Hands holding a heart for organ donation" className="hero-bg-img" /> 
     
     <div className="hero-content container">
         <div className="hero-left">
@@ -114,7 +114,7 @@ export default function Home() {
       {/* ========================================= */}
       {/* RENDER THE FOOTER COMPONENT */}
       {/* ========================================= */}
-      
+     
     </div>
   );
 }

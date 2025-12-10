@@ -1,3 +1,17 @@
+.App { /* ඔබ App.jsx හි ඇති ප්‍රධාන div class එක මෙය නම් */
+    padding-left: 0;
+    padding-right: 0;
+}
+body, html {
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
+    width: 100%;
+}
+.main-wrapper-div { /* ඔබගේ ප්‍රධාන container class එක මෙහි දමන්න */
+    padding: 0 !important;
+    margin: 0 !important;
+}
 :root{
   --primary: #7a2b7a; /* purple */
   --accent: #d998d9;  /* light pink */
@@ -37,9 +51,11 @@ header.navbar {
 
 .main-content {
   flex:1;
-  padding:28px;
-  max-width:1100px;
+  margin-right: 0%;
+  margin-left: 0%;
+  max-width:1200px;
   margin:0 auto;
+  
 }
 
 /* Hero */

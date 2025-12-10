@@ -1,26 +1,24 @@
-/* 1. Global Box-Sizing (වඩා හොඳ Layout පාලනයක් සඳහා) */
+/* 1. Global Box-Sizing (දෝෂය නිවැරදි කර ඇත) */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-/* 2. Horizontal Overflow ඉවත් කිරීම (Vertical Scrollbar එක තබාගෙන) */
+/* 2. Horizontal Overflow ඉවත් කිරීම (තිරස් ස්ක්‍රෝල් වීම නතර කරයි) */
 body, html {
-    overflow-x: hidden;
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
+    width: 100%;
 }
 
-/* Images වලට Global style එකක් එකතු කරන්න */
-img {
-    max-width: 100%; 
-    height: auto;
-    margin: 0;
+.home-page{
+    padding: 0;
 }
-
 /* Reusable helpers */
 .container {
-    /* පළල 958.4px ට ආසන්නව සකස් කළා */
     max-width: 960px; 
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px; 
 }
 
 /* Theme colors */
@@ -31,33 +29,60 @@ img {
     --green: #1fae66;
 }
 
-/* HERO */
+/* --------------------- HERO SECTION (FULL WIDTH) --------------------- */
+/* Hero Section එකට */
 .hero-section {
     position: relative;
-    padding: 20px 0 10px;
-    width: 100%;
-    min-height: 520px; /* Image එකට ඉඩ දීමට ප්‍රමාණවත් උසක් දෙන්න */
-    overflow: hidden; 
+    width: 100%; 
+    
+    /* ❌ වැදගත්: Hero Section එකේ ඇති සියලුම padding/margin ඉවත් කිරීම */
+    padding: 0; 
+    margin: 0;
+    
+    min-height: 580px; 
+    text-align: center; /* Image එක center කිරීමට උදව් කරයි */
+    /* overflow-x: auto; නැතිනම් ඉහත body/html වලට දමන්න */
+
+    padding-left: 0; 
+    padding-right: 0; 
+    margin-left: 0;
+    margin-right: 0;
 }
 
-/* Hero Background Image (banner.png) */
+/* --------------------- HERO BACKGROUND IMAGE (CHILD ELEMENT) --------------------- */
 .hero-bg-img {
+    /* ⚠️ ඔබ දැනටමත් මේවා භාවිතයෙන් Image එක center කර ඇත. */
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    
+    /* ❌ වැදගත්: Top Margin/Padding ඉවත් කිරීම */
     top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%;
+    margin-top: 0;
+    padding-top: 0;
+
+    /* Image එකේ පළල - තිරස් ස්ක්‍රෝල් කිරීම අවශ්‍ය නිසා නිශ්චිත අගයක් තබන්න */
+    width: 1500px; /* ඔබට අවශ්‍ය ප්‍රමාණය */
+    height: 120%;
+    
     object-fit: cover; 
     z-index: 1;
-}
 
-.hero-content {
+   
+}
+.hero-content{
     position: relative;
     z-index: 2;
-    display: flex;	
+    display: flex;  
     gap: 24px;
     align-items: center;
-    padding-top: 36px;
+    padding-top: 100px;
+    
+    /* Hero content මධ්‍යගත කිරීම */
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 20px; 
+    padding-right: 20px;
 }
 
 /* left text box */
@@ -65,7 +90,7 @@ img {
     max-width: 640px;
     color: #fff;
     padding: 24px;
-    background: rgba(255,255,255,0.02);	
+    background: rgba(255,255,255,0.02); 
     margin-left: 0; 
 }
 .hero-left h1 {
@@ -100,51 +125,68 @@ img {
     color: white;
 }
 
-/* right hero placeholder */
-.hero-right { flex: 0 0 300px; display:flex; justify-content:center; }
-
-/* AIM BAR */
+/* --------------------- AIM BAR --------------------- */
+/* --------------------- AIM BAR --------------------- */
+/* --------------------- AIM BAR --------------------- */
 .aim-bar {
     background: var(--accent);
     color: white;
-    text-align:center;
+    
+    /* ✅ අන්තර්ගතය මැදට ගැනීමට */
+    text-align: center; 
+    
     padding: 12px 0;
-    font-weight:700;
-    margin-top: 16px;
+    font-weight: 700;
+    
+    /* ✅ තිරයේ සම්පූර්ණ පළලට ගැලපීමට */
+    width: 100%; 
+    
+    /* ❌ අනවශ්‍ය margin අගයන් ඉවත් කර ඇත */
+    margin: 0; 
+    
+    /* Display block ලෙස තිබිය යුතුයි */
+    display: block; 
+
+    padding-top: 70px;
+    margin-top: 70px;
 }
 
-/* ABOUT SECTION */
+/* --------------------- ABOUT SECTION (FULL WIDTH) --------------------- */
 .about-section {
+    /* Home.jsx හි container පන්තිය ඉවත් කර ඇතැයි උපකල්පනය කරයි */
     display: flex; 
     gap: 30px;
     align-items: center;
-    padding: 40px 0;
+    padding: 40px 0; /* දාරවලින් padding ඉවත් කරයි */
+    width: 100%;
 }
 .about-left {
     flex: 1; 
+    padding: 0; /* Image එකේ padding ඉවත් කරයි */
 }
 
-/* About Image (bannertwo.png) */
+/* About Image (Full Width සඳහා) */
 .about-image {
-    width: 100%;
+    width: 100%; /* Navigation Bar පළලට ගැලපේ */
     height: auto;
     display: block;
+    object-fit: cover;
 }
 
 .about-right {
-    background-color: rgba(255, 255, 255, 0.9);	
+    background-color: rgba(255, 255, 255, 0.9); 
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 450px;	
+    max-width: 450px;    
     margin-left: 5%;
 }
 
 .about-right h2 {
-    color: #5d4287;	
+    color: #5d4287; 
 }
 
-/* SERVICES */
+/* --------------------- SERVICES (Container සහිත) --------------------- */
 .services { padding: 18px 0 28px; text-align:center }
 .section-title{ font-size:18px; margin-bottom:18px; color:var(--muted); letter-spacing:1px }
 .services-row{
@@ -154,9 +196,14 @@ img {
     width:220px; background: #fff; padding:14px; border-radius:8px; box-shadow:0 8px 18px rgba(0,0,0,0.06);
     text-align:center;
 }
-.service-card img{ width:56px; height:56px; object-fit:contain; margin-bottom:8px; }
+.service-card img{ 
+    width:56px; 
+    height:56px; 
+    object-fit:contain; 
+    margin-bottom:8px; 
+}
 
-/* STATS */
+/* --------------------- STATS (Container සහිත) --------------------- */
 .stats { display:flex; gap:24px; align-items:center; padding: 26px 0; }
 .stats-left { flex:1; font-size:18px; color:var(--muted) }
 .stats-left .highlight { color: #d94a4a; font-weight:700; font-size:20px; margin-left:6px; }
@@ -164,22 +211,30 @@ img {
 .stats-right { flex:0 0 200px; text-align:center; }
 .map-img{ width:160px; }
 
+
 /* Responsive */
 @media (max-width: 900px){
-    .hero-content { flex-direction:column; padding-top:12px; }
+    .hero-content { 
+        flex-direction:column; 
+        padding-top:12px;
+        padding-left: 12px; /* කුඩා තිරවලදී padding සකස් කිරීම */
+        padding-right: 12px;
+    }
     .hero-left { margin:0; padding: 16px; }
     .hero-bg { height:240px }
-    .about-section{	
+    .about-section{ 
         flex-direction: column;
         gap: 15px; 
         align-items: flex-start;
     }
     .about-left {
         max-width: 100%;
+        padding: 0 12px; /* කුඩා තිරවලදී padding සකස් කිරීම */
     }
     .about-right {
         margin-left: 0;
         max-width: 100%;
+        padding: 16px;
     }
     .stats{ flex-direction:column; align-items:flex-start; }
     .hero-left h1{ font-size:26px; }

@@ -29,6 +29,7 @@
     max-width: 450px; /* පෝරමයේ පළල සීමා කිරීම */
     width: 130%;
     margin-bottom: 24px;
+    margin: 0 auto 24px auto;
 }
 
 .form-box h2 {
