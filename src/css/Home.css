@@ -248,19 +248,67 @@ body, html {
 .stats { 
     display:flex; 
     gap:24px; 
-    align-items:center; 
+    align-items:right; 
     padding: 26px 0;
     background-color: #fff;
-    padding-bottom: 400px;
+    padding-bottom: 130px;
     margin-top: -132px;
     
  }
-.stats-left { flex:1; font-size:18px; color:var(--muted) }
-.stats-left .highlight { color: #d94a4a; font-weight:700; font-size:20px; margin-left:6px; }
-.stats-left .big-green { color:var(--green); font-weight:800; font-size:22px; display:block; margin-top:6px; }
-.stats-right { flex:0 0 200px; text-align:center; }
-.map-img{ width:160px; }
+.stats-left { 
+    flex:1; 
+    font-size:50px; 
+    color:black;
+    text-align: center;
+}
+.stats-left .highlight {
+     color: #d94a4a; 
+     font-weight:700; 
+     font-size:80px; 
+     margin-left:6px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+.stats-left .big-green { 
+    color:var(--green); 
+    font-weight:800; 
+    font-size:65px; 
+    display:block;
+    margin-top:6px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+}
+.stats-right { flex:0 0 200px; text-align:center; }
+.map-img{ 
+    width:200px;
+    transform: translateX(-100%);
+
+ }
+.mind{
+    background-color: #A838A0;
+    color: white;
+    font-size: 20px;
+    /* ✅ අන්තර්ගතය මැදට ගැනීමට */
+    text-align: left;
+    padding-left: 600px;
+    margin-left: calc(50% - 50vw);
+    
+   
+    font-weight: 400;
+    
+    /* ✅ තිරයේ සම්පූර්ණ පළලට ගැලපීමට */
+    width: 1550px; 
+    
+    /* ❌ අනවශ්‍ය margin අගයන් ඉවත් කර ඇත */
+    margin: 0; 
+    
+    /* Display block ලෙස තිබිය යුතුයි */
+    display: block; 
+
+    padding-top: 20px;
+    margin-top: -136px;
+    padding-bottom: 20px;
+    
+}
 
 /* Responsive */
 @media (max-width: 900px){

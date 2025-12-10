@@ -108,8 +108,13 @@ export default function Home() {
         <div className="stats-right">
           {/* Image of the Sri Lanka map with heart icon */}
           <img src="/assets/lanka.png" alt="Map of Sri Lanka" className="map-img" />
+            
         </div>
+        
       </section>
+      <div className="mind">
+              YOUR GIFT, THEIR TOMMOROW
+          </div>
       
       {/* ========================================= */}
       {/* RENDER THE FOOTER COMPONENT */}
