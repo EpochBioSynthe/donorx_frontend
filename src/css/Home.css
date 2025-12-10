@@ -200,10 +200,38 @@ body, html {
 }
 
 /* --------------------- SERVICES (Container සහිත) --------------------- */
-.services { padding-top: 1000px; text-align:center }
-.section-title{ font-size:18px; margin-bottom:18px; color:var(--muted); letter-spacing:1px }
+.services { 
+    padding-top: 888px; 
+    text-align:center;
+    width: 120%; 
+    padding-bottom: 40px; 
+    margin-left: calc(50% - 60vw);
+    
+    
+ }
+.section-title-h{ 
+    font-size:40px; 
+    margin-bottom:-165px; 
+    color:var(--muted); 
+    padding-top: 70px;
+    letter-spacing:1px;
+    padding-bottom: 250px;
+    margin-top: 10px;
+    background-image: linear-gradient(
+        to bottom, 
+        #CAB3D4, /* ⬆️ ඉහළ භාගයේ වර්ණය: ඔබගේ Light Purple */
+        #EAE5E9      /* ⬇️ පහළ භාගයේ වර්ණය: ඔබගේ Background Grey */
+    );
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+    
+    
+ }
 .services-row{
-    display:flex; gap:18px; justify-content:center; flex-wrap:wrap;
+    display:flex; 
+    gap:18px; 
+    justify-content:center; 
+    flex-wrap:wrap;
 }
 .service-card {
     width:220px; background: #fff; padding:14px; border-radius:8px; box-shadow:0 8px 18px rgba(0,0,0,0.06);
@@ -217,7 +245,16 @@ body, html {
 }
 
 /* --------------------- STATS (Container සහිත) --------------------- */
-.stats { display:flex; gap:24px; align-items:center; padding: 26px 0; }
+.stats { 
+    display:flex; 
+    gap:24px; 
+    align-items:center; 
+    padding: 26px 0;
+    background-color: #fff;
+    padding-bottom: 400px;
+    margin-top: -132px;
+    
+ }
 .stats-left { flex:1; font-size:18px; color:var(--muted) }
 .stats-left .highlight { color: #d94a4a; font-weight:700; font-size:20px; margin-left:6px; }
 .stats-left .big-green { color:var(--green); font-weight:800; font-size:22px; display:block; margin-top:6px; }

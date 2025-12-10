@@ -63,8 +63,8 @@ export default function Home() {
       {/* ========================================= */}
       {/* 4. OUR SERVICES SECTION */}
       {/* ========================================= */}
-      <section className="services container">
-        <h3 className="section-title">OUR SERVICES</h3>
+      <section className="services ">
+        <h3 className="section-title-h">OUR SERVICES</h3>
         <div className="services-row">
           
           {/* Card 1: Donor Registration */}
@@ -100,7 +100,7 @@ export default function Home() {
       {/* ========================================= */}
       {/* 5. STATS / MAP SECTION */}
       {/* ========================================= */}
-      <section className="stats container">
+      <section className="stats">
         <div className="stats-left">
           <p>Every year, more than <span className="highlight">10,000</span></p>
           <p>Sri Lankans struggle with severe <span className="big-green">organ failure</span></p>
