@@ -151,9 +151,11 @@ body, html {
     /* Display block ලෙස තිබිය යුතුයි */
     display: block; 
 
-    padding-top: 70px;
-    margin-top: 80px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    margin-top: 150px;
+    padding-bottom: 20px;
+    
+    
 }
 
 /* --------------------- ABOUT SECTION (FULL WIDTH) --------------------- */
@@ -164,6 +166,7 @@ body, html {
     align-items: center;
     padding: 40px 0; /* දාරවලින් padding ඉවත් කරයි */
     width: 100%;
+    
 }
 .about-left {
     flex: 1; 
@@ -172,10 +175,15 @@ body, html {
 
 /* About Image (Full Width සඳහා) */
 .about-image {
-    width: 100%; /* Navigation Bar පළලට ගැලපේ */
+    width:100%; /* Navigation Bar පළලට ගැලපේ */
     height: auto;
     display: block;
-    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    margin-top: -20px;
+    
 }
 
 .about-right {
@@ -192,7 +200,7 @@ body, html {
 }
 
 /* --------------------- SERVICES (Container සහිත) --------------------- */
-.services { padding: 18px 0 28px; text-align:center }
+.services { padding-top: 1000px; text-align:center }
 .section-title{ font-size:18px; margin-bottom:18px; color:var(--muted); letter-spacing:1px }
 .services-row{
     display:flex; gap:18px; justify-content:center; flex-wrap:wrap;
