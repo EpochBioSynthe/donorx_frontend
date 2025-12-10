@@ -19,6 +19,8 @@ body, html {
     max-width: 960px; 
     margin: 0 auto;
     padding: 0 20px; 
+
+    
 }
 
 /* Theme colors */
@@ -62,7 +64,7 @@ body, html {
     padding-top: 0;
 
     /* Image එකේ පළල - තිරස් ස්ක්‍රෝල් කිරීම අවශ්‍ය නිසා නිශ්චිත අගයක් තබන්න */
-    width: 1500px; /* ඔබට අවශ්‍ය ප්‍රමාණය */
+    width: 1560px; /* ඔබට අවශ්‍ය ප්‍රමාණය */
     height: 120%;
     
     object-fit: cover; 
@@ -129,17 +131,19 @@ body, html {
 /* --------------------- AIM BAR --------------------- */
 /* --------------------- AIM BAR --------------------- */
 .aim-bar {
-    background: var(--accent);
+    background-color: #A838A0;
     color: white;
-    
+    font-size: 30px;
     /* ✅ අන්තර්ගතය මැදට ගැනීමට */
-    text-align: center; 
+    text-align: left;
+    padding-left: 270px;
+    margin-left: calc(50% - 50vw);
     
-    padding: 12px 0;
-    font-weight: 700;
+   
+    font-weight: 400;
     
     /* ✅ තිරයේ සම්පූර්ණ පළලට ගැලපීමට */
-    width: 100%; 
+    width: 120%; 
     
     /* ❌ අනවශ්‍ය margin අගයන් ඉවත් කර ඇත */
     margin: 0; 
@@ -148,7 +152,8 @@ body, html {
     display: block; 
 
     padding-top: 70px;
-    margin-top: 70px;
+    margin-top: 80px;
+    padding-bottom: 40px;
 }
 
 /* --------------------- ABOUT SECTION (FULL WIDTH) --------------------- */
