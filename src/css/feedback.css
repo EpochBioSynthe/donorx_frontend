@@ -110,8 +110,8 @@ textarea {
     /* Submit button styling */
     background: var(--button-color); /* Darker pink for the button */
     color: white;
-    border-radius: 25px; /* Highly rounded button */
-    float: right; 
+    border-radius: 8px; /* Highly rounded button */
+    float: left; 
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

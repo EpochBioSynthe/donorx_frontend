@@ -77,9 +77,16 @@ header.navbar {
 }
 
 /* Cards row */
-.card-row { display:flex; gap:14px; margin-top:12px; flex-wrap:wrap}
-.card { background:white; padding:12px; border-radius:8px; width:220px; box-shadow:0 6px 12px rgba(0,0,0,0.04)}
-
+.card-row { 
+    display: flex; 
+    gap: 14px; /* Space between cards */
+    margin-top: 12px; 
+    /* Important: Use flex-wrap: nowrap to force them onto one line if possible */
+    flex-wrap: nowrap; 
+    /* Ensure the container uses the full width available */
+    width: 100%; 
+    justify-content: center; /* Center the entire row horizontally */
+}
 /* Footer */
 footer.site-footer { background:#1b1b1b; color:#ddd; padding:18px; margin-top:18px; text-align:center}
 
@@ -88,4 +95,19 @@ footer.site-footer { background:#1b1b1b; color:#ddd; padding:18px; margin-top:18
   .hero { flex-direction:column; align-items:flex-start }
   .nav-links{ display:none }
   .main-content { padding:12px }
+}
+.card { 
+    background: white; 
+    padding: 12px; 
+    border-radius: 8px; 
+    
+    /* ⭐ KEY CHANGE: Set card width to fit four items plus gaps */
+    width: 23%; 
+    /* Use min-width to ensure the content doesn't get too squished */
+    min-width: 200px; 
+    
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+    
+    /* Ensure height is uniform across all cards for a cleaner look */
+    height: auto; 
 }

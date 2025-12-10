@@ -68,32 +68,32 @@ export default function Home() {
         <div className="services-row">
           
           {/* Card 1: Donor Registration */}
-          <div className="service-card">
+          <div >
+             <Link to="/recipient-registration">
             <img src="/assets/doregi.png" alt="Donor Registration" />
-            <h4>Donor Registration</h4>
-            <p>Register donors safely with protective validations.</p>
-          </div>
+          </Link>
+           </div>
 
           {/* Card 2: Organ Matching */}
-          <div className="service-card">
+          <div >
+             <Link to="/organ-search">
             <img src="/assets/organmatching.png" alt="Organ Matching" />
-            <h4>Organ Matching</h4>
-            <p>Smart matching to improve compatibility and speed.</p>
-          </div>
+            </Link>
+            </div>
 
           {/* Card 3: Donation Tracking */}
-          <div className="service-card">
+          <div>
+             <Link to="/donation-record">
             <img src="/assets/dotracking.png" alt="Donation Tracking" />
-            <h4>Donation Tracking</h4>
-            <p>Track organ transfers and timelines.</p>
-          </div>
+            </Link>
+            </div>
 
           {/* Card 4: Medical Records */}
-          <div className="service-card">
+          <div >
+            <Link to="/login">
             <img src="/assets/medirecords.png" alt="Medical Records" />
-            <h4>Medical Records</h4>
-            <p>Keep donor and recipient history secure and organized.</p>
-          </div>
+            </Link>
+            </div>
         </div>
       </section>
 
@@ -114,7 +114,7 @@ export default function Home() {
       {/* ========================================= */}
       {/* RENDER THE FOOTER COMPONENT */}
       {/* ========================================= */}
-      <Footer /> 
+      
     </div>
   );
 }

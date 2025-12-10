@@ -1,0 +1,28 @@
+/* Add these styles to your main CSS file or Navbar.css */
+
+.navbar-logo {
+    /* Ensures the logo link block maintains the alignment and height */
+    display: flex; 
+    align-items: center;
+    text-decoration: none; 
+    /* Important: Remove any default margin or padding that shifts the logo */
+    margin: 0; 
+    padding: 0;
+}
+
+.logo-image {
+    /* Set the specific size for the logo */
+    height: 50px; /* Adjust this value to fit perfectly in your navbar */
+    width: auto;
+    cursor: pointer; 
+}
+/* src/css/Navbar.css (Add or modify this block) */
+
+/* Assuming nav-actions is already a flex container */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px; /* Adjust as needed */
+}
+
+/* ... rest of your CSS ... */

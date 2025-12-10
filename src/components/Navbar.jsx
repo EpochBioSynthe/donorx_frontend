@@ -1,11 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../css/Navbar.css';
 
 export default function Navbar(){
   return (
     <header className="navbar">
       <div className="nav-left">
-        <div className="brand">DonorX</div>
+        {/* REPLACED the DonorX text with the logo image and a Link */}
+        <Link to="/" className="navbar-logo"> 
+           
+            <img 
+                src="/assets/logodonorx.png" 
+                alt="DonorX Logo" 
+                className="logo-image" 
+            />
+        </Link>
       </div>
 
       <nav className="nav-links">
