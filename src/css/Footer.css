@@ -1,0 +1,133 @@
+/* Footer.css */
+
+/* --------------------- FOOTER MAIN STRUCTURE --------------------- */
+.site-footer {
+    background-color: #551D68!important; /* ගැඹුරු දම් පැහැය (Dark Purple) */
+    color: white;
+    padding: 40px 20px 0; /* උඩින් padding 40px, පැතිවලින් 20px, පහළින් 0 */
+    width: 100%;
+    
+    /* Footer එකේ ඇති කොටස් (Logo, Links, Social, Contact) පැති දෙකට පෙළ ගැසීමට */
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* අන්තර්ගතය ඉහළට පෙළ ගැසීමට */
+    flex-wrap: wrap; /* කුඩා තිර සඳහා වැදගත් */
+}
+
+/* --------------------- FOOTER COLUMNS --------------------- */
+.footer-col {
+    /* තීරු අතර පරතරය */
+    margin-bottom: 30px; 
+    min-width: 180px; /* අවම පළල */
+    padding: 0 15px; /* තීරු අතර ඉඩ */
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white; /* ශීර්ෂ වර්ණය */
+    font-weight: 600;
+}
+
+/* --------------------- LOGO / BRANDING --------------------- */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 250px; /* Logo image එකේ පළල */
+    height: auto;
+    margin-bottom: 5px;
+    margin-right: -70px;
+}
+
+/* --------------------- QUICK LINKS --------------------- */
+.quick-links a {
+    color: white; 
+    text-decoration: none;
+    display: block; /* Link එක වෙනම පේළියක පෙන්වීමට */
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.quick-links a:hover {
+    color: var(--accent); /* Hover වර්ණය */
+    text-decoration: underline;
+}
+
+/* --------------------- FOLLOW US (Social Icons) --------------------- */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px; /* Register button එකෙන් වෙන් කිරීමට */
+}
+
+.social-icons img {
+    width: 30px; /* Icon ප්‍රමාණය */
+    height: 30px;
+}
+
+/* Follow Us - Register Button style */
+.footer-register-btn {
+    background-color: #6C3483; /* Button පසුබිම් වර්ණය */
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; /* Link එකක් බැවින් */
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.footer-register-btn:hover {
+    background-color: #8A48A5; 
+}
+
+/* --------------------- CONTACT INFO --------------------- */
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.contact-info img {
+    width: 18px; /* Icon ප්‍රමාණය */
+    height: 18px;
+    filter: invert(100%); /* සුදු වර්ණයට හැරවීමට */
+}
+
+/* --------------------- COPYRIGHT BAR --------------------- */
+.copyright-bar {
+    background-color: black; /* Footer එකට වඩා තද වර්ණය */
+    color: #bdbdbd;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    width: 100vw;
+    margin-top: -17px; 
+    padding-top: -50px;
+    margin-bottom: -30px;
+    margin-left: calc(50% - 50vw);
+    margin-right:calc(50% - 50vw) ;
+}
+
+/* --------------------- RESPONSIVE ADJUSTMENTS --------------------- */
+@media (max-width: 768px) {
+    .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 0;
+    }
+    .footer-col {
+        min-width: 100%;
+        padding: 0;
+        text-align: left;
+    }
+}
