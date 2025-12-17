@@ -28,7 +28,7 @@ export default function Navbar(){
 
       <div className="nav-actions">
         <Link to="/login"><button className="btn">Login</button></Link>
-        <Link to="/signup"><button className="btn secondary">Sign Up</button></Link>
+        <Link to="/signup"><button className="btn">Sign Up</button></Link>
       </div>
     </header>
   );
