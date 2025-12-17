@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; // useNavigate import කර ඇත
 import '../css/RecipientRegistration.css'; // CSS ගොනුව ආයාත කර ඇත.
 // SuccessMessage.jsx තවදුරටත් අවශ්‍ය නැත.
-
+import Navbar from '../components/Navbar';
+import '../css/Navbar.css';
 export default function RecipientRegistration(){
     // useNavigate hook එක භාවිතා කිරීම
     const navigate = useNavigate();

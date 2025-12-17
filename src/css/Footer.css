@@ -18,8 +18,10 @@
 .footer-col {
     /* තීරු අතර පරතරය */
     margin-bottom: 30px; 
-    min-width: 180px; /* අවම පළල */
+    min-width: 365px; /* අවම පළල */
     padding: 0 15px; /* තීරු අතර ඉඩ */
+    padding-left: 10px;
+    
 }
 
 .footer-col h3 {
@@ -27,6 +29,7 @@
     margin-bottom: 20px;
     color: white; /* ශීර්ෂ වර්ණය */
     font-weight: 600;
+    
 }
 
 /* --------------------- LOGO / BRANDING --------------------- */
@@ -63,6 +66,7 @@
     display: flex;
     gap: 15px;
     margin-bottom: 20px; /* Register button එකෙන් වෙන් කිරීමට */
+    margin-left: 112px;
 }
 
 .social-icons img {
