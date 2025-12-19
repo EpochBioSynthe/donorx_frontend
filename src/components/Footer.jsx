@@ -1,9 +1,8 @@
 // Footer.jsx
-
 import React from "react";
 import { Link } from "react-router-dom";
 
-// ⚠️ Footer.css ගොනුව මෙතැනින් import කරන්න
+// Footer.css ගොනුව import කිරීම
 import '../css/Footer.css'; 
 
 export default function Footer(){
@@ -15,14 +14,16 @@ export default function Footer(){
       {/* 1. Logo / Branding Column */}
       <div className="footer-col footer-brand">
           <img src="/assets/logodonorx.png" alt="DonorX Logo" className="footer-logo" />
-          {/* <p>DonorX</p> */}
       </div>
 
       {/* 2. Quick Links Column */}
       <div className="footer-col quick-links">
           <h3>Quick Links</h3>
           <Link to="/">Home</Link>
-          <Link to="/about-us">About Us</Link>
+          
+          {/* ✅ About Us කොටසට scroll වීමට සකස් කළ Anchor Link එක */}
+          <a href="/#about-us-section">About Us</a>
+          
           <Link to="/contact-us">Contact Us</Link>
       </div>
 

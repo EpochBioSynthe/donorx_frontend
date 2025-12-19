@@ -1,0 +1,99 @@
+/* src/css/DonationRecord.css */
+
+.dr-page-container {
+    background-color: #f6f3f7;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.dr-form-wrapper {
+    width: 100%;
+    max-width: 900px;
+}
+
+.dr-section-box {
+    background-color: #E9C3E2 !important;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+.dr-title-bar {
+    background-color: #D76CE6;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.dr-input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 25px;
+}
+
+.dr-field-full {
+    grid-column: span 2;
+}
+
+.dr-field label, .dr-field-full label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+    text-align: left;
+}
+
+.dr-field input, .dr-field select, .dr-field-full input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #FFF0F5;
+    font-size: 14px;
+}
+
+/* Textarea සඳහා මෝස්තර */
+.dr-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #FFF0F5;
+    font-size: 14px;
+    resize: vertical; /* අවශ්‍ය නම් පේළි ගණන වෙනස් කිරීමට */
+    min-height: 120px; /* පින්තූරයේ ඇති පරිදි ලොකු කිරීමට */
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* බොත්තම් වල මෝස්තර */
+.dr-action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.dr-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.dr-save { background-color: #3B5998; }
+.dr-update { background-color: #2E7D32; }
+.dr-clear { background-color: #A1887F; }
+.dr-back { background-color: #000000; }
+
+.dr-btn:hover { opacity: 0.85; transform: translateY(-2px); }

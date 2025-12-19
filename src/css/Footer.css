@@ -2,34 +2,29 @@
 
 /* --------------------- FOOTER MAIN STRUCTURE --------------------- */
 .site-footer {
-    background-color: #551D68!important; /* ගැඹුරු දම් පැහැය (Dark Purple) */
+    background-color: #551D68!important; /* ගැඹුරු දම් පැහැය */
     color: white;
-    padding: 40px 20px 0; /* උඩින් padding 40px, පැතිවලින් 20px, පහළින් 0 */
+    padding: 25px 20px 0 !important; /* */
     width: 100%;
-    
-    /* Footer එකේ ඇති කොටස් (Logo, Links, Social, Contact) පැති දෙකට පෙළ ගැසීමට */
     display: flex;
     justify-content: space-around;
-    align-items: flex-start; /* අන්තර්ගතය ඉහළට පෙළ ගැසීමට */
-    flex-wrap: wrap; /* කුඩා තිර සඳහා වැදගත් */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-x: hidden; /* දෙපසට පැනීම වැළැක්වීමට මෙය වැදගත් වේ */
 }
 
 /* --------------------- FOOTER COLUMNS --------------------- */
 .footer-col {
-    /* තීරු අතර පරතරය */
-    margin-bottom: 30px; 
-    min-width: 365px; /* අවම පළල */
-    padding: 0 15px; /* තීරු අතර ඉඩ */
-    padding-left: 10px;
-    
+    margin-bottom: 15px;
+    min-width: 250px;
+    padding: 0 15px;
 }
 
 .footer-col h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: white; /* ශීර්ෂ වර්ණය */
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: white;
     font-weight: 600;
-    
 }
 
 /* --------------------- LOGO / BRANDING --------------------- */
@@ -41,55 +36,50 @@
 }
 
 .footer-logo {
-    width: 250px; /* Logo image එකේ පළල */
+    width: 180px;
     height: auto;
     margin-bottom: 5px;
-    margin-right: -70px;
 }
 
 /* --------------------- QUICK LINKS --------------------- */
 .quick-links a {
-    color: white; 
+    color: white;
     text-decoration: none;
-    display: block; /* Link එක වෙනම පේළියක පෙන්වීමට */
-    margin-bottom: 10px;
-    transition: color 0.3s;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
 .quick-links a:hover {
-    color: var(--accent); /* Hover වර්ණය */
+    color: #d998d9;
     text-decoration: underline;
 }
 
 /* --------------------- FOLLOW US (Social Icons) --------------------- */
 .social-icons {
     display: flex;
-    gap: 15px;
-    margin-bottom: 20px; /* Register button එකෙන් වෙන් කිරීමට */
-    margin-left: 112px;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding-left: 65px;
 }
 
 .social-icons img {
-    width: 30px; /* Icon ප්‍රමාණය */
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
-/* Follow Us - Register Button style */
 .footer-register-btn {
-    background-color: #6C3483; /* Button පසුබිම් වර්ණය */
+    background-color: #6C3483;
     color: white;
-    padding: 10px 30px;
+    padding: 8px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
-    text-decoration: none; /* Link එකක් බැවින් */
+    text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s;
-}
-
-.footer-register-btn:hover {
-    background-color: #8A48A5; 
+    transition: 0.3s;
 }
 
 /* --------------------- CONTACT INFO --------------------- */
@@ -97,41 +87,48 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 6px;
+    font-size: 13px;
 }
 
 .contact-info img {
-    width: 18px; /* Icon ප්‍රමාණය */
-    height: 18px;
-    filter: invert(100%); /* සුදු වර්ණයට හැරවීමට */
+    width: 16px;
+    height: 16px;
+    filter: invert(100%);
 }
 
+/* --------------------- COPYRIGHT BAR (UPDATED) --------------------- */
 /* --------------------- COPYRIGHT BAR --------------------- */
 .copyright-bar {
-    background-color: black; /* Footer එකට වඩා තද වර්ණය */
+    background-color: black;
     color: #bdbdbd;
     text-align: center;
     padding: 15px 0;
-    font-size: 14px;
-    width: 100vw;
-    margin-top: -17px; 
-    padding-top: -50px;
-    margin-bottom: -30px;
-    margin-left: calc(50% - 50vw);
-    margin-right:calc(50% - 50vw) ;
+    font-size: 12px;
+    
+    /* කළු බාර් එක දෙපසටම විහිදුවීමට ඇති ආරක්ෂිතම ක්‍රමය */
+    width: 110%;              /* Container එකට වඩා පළල වැඩිකරයි */
+    margin-left: -5%;         /* වම් පැත්තේ padding එක වසා ගනී */
+    margin-right: -5%;        /* දකුණු පැත්තේ padding එක වසා ගනී */
+    
+    margin-top: 15px;         
+    margin-bottom: 0 !important;
+    position: relative;
+    display: block;
 }
 
 /* --------------------- RESPONSIVE ADJUSTMENTS --------------------- */
 @media (max-width: 768px) {
     .site-footer {
         flex-direction: column;
-        align-items: flex-start;
-        padding-bottom: 0;
+        align-items: center;
+        text-align: center;
     }
     .footer-col {
         min-width: 100%;
-        padding: 0;
-        text-align: left;
+        margin-bottom: 20px;
+    }
+    .social-icons {
+        justify-content: center;
     }
 }

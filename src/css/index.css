@@ -1,128 +1,70 @@
-.App { /* ඔබ App.jsx හි ඇති ප්‍රධාන div class එක මෙය නම් */
-    padding-left: 0;
-    padding-right: 0;
+/* index.css */
+html {
+  scroll-behavior: smooth;
 }
-body, html {
+/* 1. මූලික Reset කිරීම් - සියලුම අනවශ්‍ය Margins ඉවත් කරයි */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html, #root {
     margin: 0; 
     padding: 0; 
-    overflow-x: hidden; 
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden; /* තිරස් අතට පැනීම නතර කරයි */
+    background: #f6f3f7;
+}
+
+/* 2. ප්‍රධාන App Container එක */
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     width: 100%;
 }
-.main-wrapper-div { /* ඔබගේ ප්‍රධාන container class එක මෙහි දමන්න */
-    padding: 0 !important;
-    margin: 0 !important;
-}
-:root{
-  --primary: #7a2b7a; /* purple */
-  --accent: #d998d9;  /* light pink */
-  --bg: #f6f3f7;
-  --muted: #777;
-}
 
-*{box-sizing:border-box}
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: var(--bg);
-  color: #222;
-  -webkit-font-smoothing:antialiased;
-}
-
-.app {
-  min-height: 100vh;
-  display:flex;
-  flex-direction:column;
-}
-
-header.navbar {
-  background: var(--primary);
-  color: #fff;
-  padding: 14px 24px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.nav-left {display:flex; align-items:center; gap:12px}
-.brand { font-weight:700 }
-.nav-links { display:flex; gap:16px; align-items:center}
-.nav-links a { color:#fff; text-decoration:none; font-weight:600; font-size:14px}
-.nav-actions button { background:transparent; border:1px solid rgba(255,255,255,0.3); color:#fff; padding:6px 12px; border-radius:6px; cursor:pointer;}
-
+/* 3. Main Content එක (Navbar සහ Footer අතර කොටස) */
 .main-content {
-  flex:1;
-  width: 100%;
-  margin: 0;
-  
-  
+    flex: 1; /* Footer එක අඩියටම තල්ලු කරයි */
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-/* Hero */
-.hero {
-  background: white;
-  border-radius:8px;
-  padding:24px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.06);
-  margin-bottom:20px;
-  display:flex;
-  gap:20px;
-  align-items:center;
-  justify-content:space-between;
-}
-.hero .left {flex:1}
-.hero h1{ margin:0 0 12px 0; color:var(--primary)}
-.hero p{ margin:0 0 16px 0; color:var(--muted)}
-.hero .cta-group{ display:flex; gap:12px}
-.btn { background:var(--primary); color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer}
-.btn.secondary { background:transparent; border:2px solid var(--primary); color:var(--primary)}
-
-/* Form boxes */
-.form-box {
-  background:#fff; padding:18px; border-radius:6px; box-shadow:0 6px 12px rgba(0,0,0,0.04);
-  max-width:720px;
-  margin:12px 0;
-}
-.form-box label { display:block; font-size:13px; margin-bottom:6px; color:var(--muted)}
-.form-box input, .form-box textarea, .form-box select {
-  width:100%;
-  padding:10px 12px;
-  margin-bottom:12px;
-  border:1px solid #e6e6e6;
-  border-radius:6px;
+/* 4. Navbar Alignment (Home page එකට සමාන කරයි) */
+header.navbar {
+    background: #7a2b7a; /* ඔබගේ --primary වර්ණය */
+    color: #fff;
+    padding: 14px 5%; /* Home page එකේ ඇති 5% padding එකම ලබා දීම */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-/* Cards row */
-.card-row { 
-    display: flex; 
-    gap: 14px; /* Space between cards */
-    margin-top: 12px; 
-    /* Important: Use flex-wrap: nowrap to force them onto one line if possible */
-    flex-wrap: nowrap; 
-    /* Ensure the container uses the full width available */
-    width: 100%; 
-    justify-content: center; /* Center the entire row horizontally */
+/* 5. Footer Alignment (Home page එකට සමාන කරයි) */
+footer.site-footer {
+    background: #1b1b1b;
+    color: #ddd;
+    padding: 40px 5%; /* Navbar එකේ පරතරයටම සමාන කිරීම */
+    width: 100%;
+    text-align: center;
 }
-/* Footer */
-footer.site-footer { background:#1b1b1b; color:#ddd; padding:18px; margin-top:18px; text-align:center}
+
+/* --- අමතර Helpers (ඔබේ පැරණි කේතයෙන් ගත්) --- */
+:root {
+  --primary: #7a2b7a;
+  --bg: #f6f3f7;
+}
+
+.nav-links { display: flex; gap: 20px; align-items: center; list-style: none; }
+.nav-links a { color: #fff; text-decoration: none; font-weight: 600; font-size: 14px; }
 
 /* Responsive */
-@media (max-width:800px){
-  .hero { flex-direction:column; align-items:flex-start }
-  .nav-links{ display:none }
-  .main-content { padding:0 }
-}
-.card { 
-    background: white; 
-    padding: 12px; 
-    border-radius: 8px; 
-    
-    /* ⭐ KEY CHANGE: Set card width to fit four items plus gaps */
-    width: 23%; 
-    /* Use min-width to ensure the content doesn't get too squished */
-    min-width: 200px; 
-    
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
-    
-    /* Ensure height is uniform across all cards for a cleaner look */
-    height: auto; 
+@media (max-width: 800px) {
+    .nav-links { display: none; }
+    header.navbar, footer.site-footer { padding: 14px 20px; }
 }

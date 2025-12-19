@@ -1,126 +1,60 @@
-// src/pages/Home.jsx
-
 import React from "react";
 import { Link } from "react-router-dom";
-
-// 1. IMPORT SIBLING COMPONENTS
-import Navbar from '../components/Navbar'; // Assumes Navbar.jsx is in src/components/
-import Footer from '../components/Footer'; // Assumes Footer.jsx is in src/components/
-
-// 2. IMPORT CSS (Corrected path assuming 'css' is under 'src')
-// NOTE: You must create the Home.css file in the src/css/ folder
 import '../css/Home.css'; 
 
 export default function Home() {
   return (
     <div className="home-page">
       
-     
-
-      {/* ========================================= */}
-{/* 1. HERO SECTION & CALL TO ACTION (WITH EMBEDDED IMAGE) */}
-{/* ========================================= */}
-        <section className="hero-section">
-    {/* NEW: Replaced the empty <div className="hero-bg" /> 
-        with an actual <img> tag for the background image.
-    */}
-            <img src="/assets/banner.png" alt="Hands holding a heart for organ donation" className="hero-bg-img" /> 
-    
-    <div className="hero-content container">
-        <div className="hero-left">
-
-            
-        </div>
-        
-        <div className="hero-right">
-          <div className="cta-group">
-                {/* Buttons දැනටමත් මෙහි ඇත */}
-                <Link to="/signup"><button className="btn primary">REGISTER</button></Link>
-                <Link to="/donation-record"><button className="btn outline">Explore Donation Records</button></Link>
+      {/* 1. HERO SECTION */}
+      <section className="hero-section">
+        <img src="/assets/banner.png" alt="Banner" className="hero-bg-img" /> 
+        <div className="hero-content container">
+          <div className="hero-right">
+            <div className="cta-group">
+              <Link to="/signup"><button className="btn primary">REGISTER</button></Link>
+              <Link to="/donation-record"><button className="btn outline">Explore Donation Records</button></Link>
             </div>
-            {/* This div remains empty for layout padding/flex balancing */}
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-      {/* ========================================= */}
-      {/* 2. AIM BAR (Motto Bar) */}
-      {/* ========================================= */}
+      {/* 2. AIM BAR */}
       <div className="aim-bar">
         OUR AIM IS TO INSPIRE AND SUPPORT LIFE SAVING ORGAN DONATION
       </div>
 
-     {/* ========================================= */}
-{/* 3. ABOUT US SECTION (WITH EMBEDDED IMAGE) */}
-{/* ========================================= */}
-<section className="about-section container">
-    <div className="about-left">
-        {/* NEW: Insert the image directly here */}
-        <img src="/assets/bannertwo.png" alt="Doctor with green awareness ribbon" className="about-image" />
-    </div>
-    
-</section>
+      {/* 3. ABOUT US SECTION - ID එක මෙහි එක් කර ඇත */}
+      <section className="about-section" id="about-us-section">
+        <img src="/assets/bannertwo.png" alt="About Us" className="about-image" />
+      </section>
 
-      {/* ========================================= */}
       {/* 4. OUR SERVICES SECTION */}
-      {/* ========================================= */}
-      <section className="services ">
+      <section className="services">
         <h3 className="section-title-h">OUR SERVICES</h3>
         <div className="services-row">
-          
-          {/* Card 1: Donor Registration */}
-          <div >
-             <Link to="/recipient-registration">
-            <img src="/assets/doregi.png" alt="Donor Registration" />
-          </Link>
-           </div>
-
-          {/* Card 2: Organ Matching */}
-          <div >
-             <Link to="/organ-search">
-            <img src="/assets/organmatching.png" alt="Organ Matching" />
-            </Link>
-            </div>
-
-          {/* Card 3: Donation Tracking */}
-          <div>
-             <Link to="/donation-record">
-            <img src="/assets/dotracking.png" alt="Donation Tracking" />
-            </Link>
-            </div>
-
-          {/* Card 4: Medical Records */}
-          <div >
-            <Link to="/login">
-            <img src="/assets/medirecords.png" alt="Medical Records" />
-            </Link>
-            </div>
+          <Link to="/recipient-registration"><img src="/assets/doregi.png" alt="Service 1" className="service-card-img" /></Link>
+          <Link to="/organ-search"><img src="/assets/organmatching.png" alt="Service 2" className="service-card-img" /></Link>
+          <Link to="/donation-record"><img src="/assets/dotracking.png" alt="Service 3" className="service-card-img" /></Link>
+          <Link to="/login"><img src="/assets/medirecords.png" alt="Service 4" className="service-card-img" /></Link>
         </div>
       </section>
 
-      {/* ========================================= */}
-      {/* 5. STATS / MAP SECTION */}
-      {/* ========================================= */}
+      {/* 5. STATS SECTION */}
       <section className="stats">
         <div className="stats-left">
           <p>Every year, more than <span className="highlight">10,000</span></p>
           <p>Sri Lankans struggle with severe <span className="big-green">organ failure</span></p>
         </div>
         <div className="stats-right">
-          {/* Image of the Sri Lanka map with heart icon */}
           <img src="/assets/lanka.png" alt="Map of Sri Lanka" className="map-img" />
-            
         </div>
-        
       </section>
+
       <div className="mind">
-              YOUR GIFT, THEIR TOMMOROW
-          </div>
+        YOUR GIFT, THEIR TOMORROW
+      </div>
       
-      {/* ========================================= */}
-      {/* RENDER THE FOOTER COMPONENT */}
-      {/* ========================================= */}
-     
     </div>
   );
 }

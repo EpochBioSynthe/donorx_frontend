@@ -1,28 +1,46 @@
-/* Add these styles to your main CSS file or Navbar.css */
-
-.navbar-logo {
-    /* Ensures the logo link block maintains the alignment and height */
-    display: flex; 
+.navbar {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    text-decoration: none; 
-    /* Important: Remove any default margin or padding that shifts the logo */
-    margin: 0; 
-    padding: 0;
+    padding: 10px 5%;
+    background-color: #7b1fa2; /* තද දම් පැහැය */
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
 }
 
 .logo-image {
-    /* Set the specific size for the logo */
-    height: 50px; /* Adjust this value to fit perfectly in your navbar */
+    height: 50px;
     width: auto;
-    cursor: pointer; 
 }
-/* src/css/Navbar.css (Add or modify this block) */
 
-/* Assuming nav-actions is already a flex container */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
 .nav-actions {
     display: flex;
-    align-items: center;
-    gap: 18px; /* Adjust as needed */
+    gap: 15px;
 }
 
-/* ... rest of your CSS ... */
+.btn {
+    padding: 8px 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+.signup-btn { background-color: #d81b60; }
+.login-btn { background-color: transparent; border: 1px solid white; }

@@ -2,18 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../css/Navbar.css';
 
-export default function Navbar(){
+export default function Navbar() {
   return (
     <header className="navbar">
       <div className="nav-left">
-        {/* REPLACED the DonorX text with the logo image and a Link */}
-        <Link to="/" className="navbar-logo"> 
-           
-            <img 
-                src="/assets/logodonorx.png" 
-                alt="DonorX Logo" 
-                className="logo-image" 
-            />
+        <Link to="/" className="navbar-logo">
+          <img 
+            src="/assets/logodonorx.png" 
+            alt="DonorX Logo" 
+            className="logo-image" 
+          />
         </Link>
       </div>
 
@@ -27,8 +25,8 @@ export default function Navbar(){
       </nav>
 
       <div className="nav-actions">
-        <Link to="/login"><button className="btn">Login</button></Link>
-        <Link to="/signup"><button className="btn">Sign Up</button></Link>
+        <Link to="/login"><button className="btn login-btn">Login</button></Link>
+        <Link to="/signup"><button className="btn signup-btn">Sign Up</button></Link>
       </div>
     </header>
   );

@@ -1,111 +1,91 @@
-/* src/css/RegistrationSuccess.css */
-
-
-/* සම්පූර්ණ පිටුවේ background එක */
+/* සම්පූර්ණ පිටුවේ පසුබිම */
 .registration-success-page {
-    /* ඔබ කලින් පෙන්වූ light purple වර්ණයට සමාන වර්ණයක් */
-    background-color:#E0B0FF;
-    min-height: 50%;
+    background-color: #E0B0FF;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 40px;
-    margin-top: 20%;
-    margin-bottom: 20%;
-    background-image: url('../assets/suscce_bi.png');
-
+    background-color: white;
+    background-size: cover;
 }
 
-/* Success Box Container එක - White Box සහ Purple Shadow එක අඩංගු වේ */
+/* 🟣 ඔබ ඇසූ දම් පැහැති විශාල Card එක */
 .success-box-container {
     position: relative;
-    width: 400px;
-    height: 450px;
+    width: 600px;             /* Card එකේ පළල */
+    height: 450px;            /* Card එකේ උස */
+    background-color: #E9C3E2; /* දම් පැහැති පසුබිම් වර්ණය */
+    
+    /* 🖼️ Card එක ඇතුළත පින්තූරය එක් කිරීම */
+    background-image: url('../assets/suscce_bi.png'); 
+    background-size: cover;
+    background-position: center;
+    
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3); /* ලස්සන border එකක් */
 }
 
-/* Purple Shadow Layer - පිටුපස ඇති විශාල වක්‍ර කොටස */
-
-
-/* White Success Box - ඉදිරියෙන් ඇති ප්‍රධාන කොටස */
+/* ⚪ Card එක මැද ඇති සුදු Success Box එක */
 .white-success-box {
-    position: absolute;
-    width: 350px;
-    padding: 30px;
+    width: 380px;
+    padding: 35px;
     background-color: white;
     border-radius: 30px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
     text-align: center;
-    z-index: 100; /* Purple layer එකට ඉහළින් තැබීමට */
-    /* මෙම box එක මධ්‍යයේ තැබීමට */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: 10;
 }
 
-.btn-ok{
-    width: 300px;
+/* OK Button */
+.btn-ok {
+    width: 100%;
+    max-width: 250px;
     background: #B03576 !important;
     color: white;
     border: none;
-    padding: 12px 20px; /* බොත්තම් තරමක් විශාල කළා */
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 10px;
     cursor: pointer;
-    font-weight: 500px;
-    transition: background-color 0.3s;
-    text-decoration: none; /* Link එකක් තුළ තිබේ නම් */
-    display: inline-block;
-    margin-top: 8%;
-    margin-bottom: 5%;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
 }
-/* Icon එක සඳහා Styles */
+
+.btn-ok:hover {
+    background: #902a61 !important;
+    transform: scale(1.02);
+}
+
+/* Icon Styles */
 .success-icon {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #fff; /* Checkmark එකට පිටුපස ඇති සුදු වෘත්තය */
-    border: 4px solid #8A2BE2; /* Checkmark වටේ ඇති දම් පාට දාරය */
-    margin: 0 auto 20px auto;
+    border: 4px solid #8A2BE2;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto 15px auto;
 }
 
 .checkmark-symbol {
     font-size: 50px;
-    color: #8A2BE2; /* Checkmark එකේ වර්ණය */
-    line-height: 1;
+    color: #8A2BE2;
 }
 
-/* Text Styles */
 .success-title {
-    color:black;
-    font-size: 24px;
+    font-size: 28px;
+    color: black;
     margin-bottom: 10px;
 }
 
-.success-message, .request-id {
-    color:black;
+.success-message {
     font-size: 14px;
-    margin-bottom: 5px;
-}
-
-/* Button Styles */
-.btn-login {
-    margin-top: 25px; 
-    padding: 10px 25px; 
-    background-color: #8A2BE2; /* දම් පාට බොත්තම */
-    color: white; 
-    border: none; 
-    border-radius: 20px; 
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.btn-login:hover {
-    background-color: #6a1aae;
+    color: #333;
+    line-height: 1.5;
 }
