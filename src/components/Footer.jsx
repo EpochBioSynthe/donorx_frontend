@@ -1,8 +1,8 @@
-// Footer.jsx
+
 import React from "react";
 import { Link } from "react-router-dom";
 
-// Footer.css ගොනුව import කිරීම
+
 import '../css/Footer.css'; 
 
 export default function Footer(){
@@ -10,28 +10,19 @@ export default function Footer(){
 
   return (
     <footer className="site-footer">
-      
-      {/* 1. Logo / Branding Column */}
       <div className="footer-col footer-brand">
           <img src="/assets/logodonorx.png" alt="DonorX Logo" className="footer-logo" />
       </div>
 
-      {/* 2. Quick Links Column */}
       <div className="footer-col quick-links">
           <h3>Quick Links</h3>
           <Link to="/">Home</Link>
-          
-          {/* ✅ About Us කොටසට scroll වීමට සකස් කළ Anchor Link එක */}
           <a href="/#about-us-section">About Us</a>
-          
           <Link to="/contact-us">Contact Us</Link>
       </div>
 
-      {/* 3. Follow Us Column */}
       <div className="footer-col follow-us">
           <h3>Follow Us</h3>
-          
-          {/* Social Icons */}
           <div className="social-icons">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                   <img src="/assets/fb.png" alt="Facebook" />
@@ -43,12 +34,8 @@ export default function Footer(){
                   <img src="/assets/tiktok.png" alt="TikTok" />
               </a>
           </div>
-          
-          {/* Register Button */}
           <Link to="/signup" className="footer-register-btn">Register</Link>
       </div>
-
-      {/* 4. Contact Column */}
       <div className="footer-col contact-info">
           <h3>Contact</h3>
           <p>
@@ -69,7 +56,6 @@ export default function Footer(){
           </p>
       </div>
 
-      {/* Copyright Bar (Full Width) */}
       <div className="copyright-bar">
           © {currentYear} DonorX. All rights reserved.
       </div>

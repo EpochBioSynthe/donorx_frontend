@@ -1,5 +1,3 @@
-/* src/css/DonationRecord.css */
-
 .dr-page-container {
     background-color: #f6f3f7;
     padding: 40px 20px;
@@ -58,7 +56,6 @@
     font-size: 14px;
 }
 
-/* Textarea සඳහා මෝස්තර */
 .dr-textarea {
     width: 100%;
     padding: 12px;
@@ -66,13 +63,12 @@
     border-radius: 6px;
     background-color: #FFF0F5;
     font-size: 14px;
-    resize: vertical; /* අවශ්‍ය නම් පේළි ගණන වෙනස් කිරීමට */
-    min-height: 120px; /* පින්තූරයේ ඇති පරිදි ලොකු කිරීමට */
+    resize: vertical; 
+    min-height: 120px; 
     box-sizing: border-box;
     font-family: inherit;
 }
 
-/* බොත්තම් වල මෝස්තර */
 .dr-action-buttons {
     display: flex;
     justify-content: center;

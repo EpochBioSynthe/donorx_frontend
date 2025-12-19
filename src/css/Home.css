@@ -1,4 +1,3 @@
-/* 1. Global Reset */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -15,7 +14,6 @@ body, html {
     width: 100%;
 }
 
-/* Reusable Container */
 .container {
     max-width: 1200px; 
     margin: 0 auto;
@@ -29,15 +27,14 @@ body, html {
     --green: #1fae66;
 }
 
-/* --------------------- HERO SECTION --------------------- */
 .hero-section {
     position: relative;
     width: 100%; 
-    height: 600px; /* උස ස්ථාවර කරන ලදි */
+    height: 600px;
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Buttons සහ Text පහළට තල්ලු කරයි */
+    justify-content: flex-end; 
     padding-top: 150px;
     padding-right: 190px;
 }
@@ -48,7 +45,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* රූපය ඇද නොවී පෙනීමට */
+    object-fit: cover; 
     z-index: 1;
 }
 
@@ -57,7 +54,7 @@ body, html {
     z-index: 2;
     width: 100%;
     display: flex;
-    justify-content: flex-end; /* Buttons දකුණු පසට */
+    justify-content: flex-end;
 }
 
 .hero-right {
@@ -83,9 +80,8 @@ body, html {
 .btn.primary { background: #632B61; color: white; border: 1px solid white; }
 .btn.outline { background: #632B61; color: white; border: 1px solid white; }
 
-/* --------------------- AIM BAR --------------------- */
 .aim-bar {
-    background-color: #A838A0;
+    background-color:#A47DAB;
     color: white;
     font-size: 24px;
     text-align: center;
@@ -96,7 +92,6 @@ body, html {
     margin-top: 50px;
 }
 
-/* --------------------- ABOUT SECTION --------------------- */
 .about-section {
     width: 100%;
     padding: 0;
@@ -110,14 +105,13 @@ body, html {
     margin-bottom: 50px;
 }
 
-/* --------------------- SERVICES --------------------- */
 .services {
     padding: 60px 0;
     text-align: center;
     background-image: linear-gradient(
         to bottom, 
-        #CAB3D4, /* ⬆️ ඉහළ භාගයේ වර්ණය: ඔබගේ Light Purple */
-        #EAE5E9      /* ⬇️ පහළ භාගයේ වර්ණය: ඔබගේ Background Grey */
+        #DA70D6, 
+        #EAE5E9      
     );
 }
 
@@ -168,7 +162,7 @@ body, html {
 }
 
 .mind {
-    background-color: #A838A0;
+    background-color: #A47DAB;
     color: white;
     padding: 20px;
     text-align: center;

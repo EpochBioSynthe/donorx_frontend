@@ -1,6 +1,3 @@
-/* ContactUs.css */
-
-/* සම්පූර්ණ පිටුවේ පසුබිම */
 .contact-us-page {
     display: flex;
     flex-direction: column;
@@ -10,7 +7,6 @@
     min-height: 80vh;
 }
 
-/* 🟣 දම් පැහැති Form Box එක */
 .contact-us-page .form-box {
     background: #E9C3E2 !important;
     padding: 24px;
@@ -21,7 +17,6 @@
     margin: 0 auto;
 }
 
-/* මැද ඇති රෝස/දම් පැහැති Title එක */
 .contact-us-page .section-title {
     font-size: 1.1rem;
     font-weight: 540;
@@ -33,7 +28,6 @@
     text-align: center;
 }
 
-/* Labels Styles */
 .contact-us-page .form-box label {
     display: block;
     font-size: 13px;
@@ -43,7 +37,6 @@
     text-align: left;
 }
 
-/* Inputs and Textarea Styles */
 .contact-us-page .form-box input, 
 .contact-us-page .form-box textarea {
     width: 100%;
@@ -52,25 +45,23 @@
     border: 1px solid #d9d9d9;
     border-radius: 6px;
     font-size: 12px;
-    box-sizing: border-box; /* පෑඩිං නිසා පළල වැඩිවීම වැළැක්වීමට */
 }
 
-/* 🚀 Send Button - Recipient Registration එකේ වර්ණ සහ Radius එලෙසම */
 .contact-us-page .btn-1 {
     background: #B03576 !important;
     color: white !important;
     border: none;
     padding: 12px 20px;
-    border-radius: 8px; /* Recipient Registration හි Radius එක */
+    border-radius: 8px; 
     cursor: pointer;
     font-weight: 600;
     font-size: 14px;
     transition: background-color 0.3s;
-    width: 20%; /* බොත්තම සම්පූර්ණ පළලට ගැනීමට */
+    width: 20%; 
 }
 
 .contact-us-page .btn-1:hover {
-    background: #902a61 !important; /* Hover කරන විට මඳක් තද පැහැය */
+    background: #902a61 !important;
 }
 
 .contact-us-page .button-group {

@@ -1,8 +1,5 @@
-/* Footer.css */
-
-/* --------------------- FOOTER MAIN STRUCTURE --------------------- */
 .site-footer {
-    background-color: #551D68 !important; /* ගැඹුරු දම් පැහැය */
+    background-color: #551D68 !important; 
     color: white;
     padding: 25px 20px 0 !important;
     width: 100%;
@@ -13,7 +10,6 @@
     overflow-x: hidden;
 }
 
-/* --------------------- FOOTER COLUMNS --------------------- */
 .footer-col {
     margin-bottom: 15px;
     min-width: 250px;
@@ -27,7 +23,6 @@
     font-weight: 600;
 }
 
-/* --------------------- LOGO / BRANDING --------------------- */
 .footer-brand {
     display: flex;
     flex-direction: column;
@@ -41,7 +36,6 @@
     margin-bottom: 5px;
 }
 
-/* --------------------- QUICK LINKS --------------------- */
 .quick-links a {
     color: white;
     text-decoration: none;
@@ -56,7 +50,6 @@
     text-decoration: underline;
 }
 
-/* --------------------- FOLLOW US (Social Icons) --------------------- */
 .social-icons {
     display: flex;
     gap: 12px;
@@ -69,13 +62,12 @@
     height: 25px;
 }
 
-/* --- UPDATED REGISTER BUTTON (FEEDBACK STYLE) --- */
 .footer-register-btn {
-    background-color: #B03576 !important; /* Feedback Submit Button Color */
+    background-color: #B03576 !important; 
     color: white !important;
     padding: 8px 20px;
     border: none;
-    border-radius: 8px; /* Feedback Button Radius */
+    border-radius: 8px; 
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -85,11 +77,10 @@
 }
 
 .footer-register-btn:hover {
-    background-color: #7a2b7a !important; /* Feedback Hover Color */
+    background-color: #7a2b7a !important; 
     transform: translateY(-2px);
 }
 
-/* --------------------- CONTACT INFO --------------------- */
 .contact-info p {
     display: flex;
     align-items: center;
@@ -104,7 +95,6 @@
     filter: invert(100%);
 }
 
-/* --------------------- COPYRIGHT BAR --------------------- */
 .copyright-bar {
     background-color: black;
     color: #bdbdbd;
@@ -120,7 +110,6 @@
     display: block;
 }
 
-/* --------------------- RESPONSIVE ADJUSTMENTS --------------------- */
 @media (max-width: 768px) {
     .site-footer {
         flex-direction: column;

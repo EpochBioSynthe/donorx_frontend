@@ -21,7 +21,7 @@ export default function Navbar() {
         <Link to="/donation-record">Donation Records</Link>
         <Link to="/recipient-registration">Register Recipient</Link>
         <Link to="/feedback">Feedback</Link>
-        <Link to="/contact-us">Contact</Link>
+        <Link to="/contact-us">Contact Us</Link>
       </nav>
 
       <div className="nav-actions">
