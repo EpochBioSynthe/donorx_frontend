@@ -1,4 +1,3 @@
-/* OrganSearch.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 * {
@@ -19,7 +18,6 @@ body {
   padding: 20px;
 }
 
-/* Main container */
 .main-app-container {
   display: flex;
   flex-direction: column;
@@ -29,7 +27,6 @@ body {
   padding-top: 20px;
 }
 
-/* ------------ PART 1 — Organ Search BOX ------------ */
 .organ-search-container {
   width: 100%;
   max-width: 1274px;

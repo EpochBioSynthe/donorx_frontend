@@ -1,26 +1,23 @@
-/* සම්පූර්ණ පිටුවේ පසුබිම */
 .registration-success-page {
-    background-color: white; /* මුලින් තිබූ සුදු පැහැය */
-    height: 100vh;           /* Screen එකේ උසට සමාන කළා */
-    width: 100vw;            /* Screen එකේ පළලට සමාන කළා */
+    background-color: white;
+    height: 100vh;       
+    width: 100vw;         
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;        /* Scroll වීම සම්පූර්ණයෙන්ම නතර කරයි */
-    position: fixed;         /* පිටුව ස්ථාවරව තබයි */
+    overflow: hidden;        
+    position: fixed;        
     top: 0;
     left: 0;
-    z-index: 2000;           /* අනෙක් දේවල් වලට වඩා උඩින් පෙන්වීමට */
+    z-index: 2000;           
 }
 
-/* 🟣 ඔබ ඇසූ දම් පැහැති විශාල Card එක */
 .success-box-container {
     position: relative;
-    width: 600px;             /* Card එකේ පළල */
-    height: 450px;            /* Card එකේ උස */
-    background-color: #E9C3E2; /* දම් පැහැති පසුබිම් වර්ණය */
-    
-    /* 🖼️ Card එක ඇතුළත පින්තූරය එක් කිරීම */
+    width: 600px;             
+    height: 450px;            
+    background-color: #E9C3E2; 
+   
     background-image: url('../assets/suscce_bi.png'); 
     background-size: cover;
     background-position: center;
@@ -30,10 +27,9 @@
     align-items: center;
     border-radius: 40px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3); /* ලස්සන border එකක් */
+    border: 2px solid rgba(255, 255, 255, 0.3); 
 }
 
-/* ⚪ Card එක මැද ඇති සුදු Success Box එක */
 .white-success-box {
     width: 380px;
     padding: 35px;
@@ -44,7 +40,6 @@
     z-index: 10;
 }
 
-/* OK Button */
 .btn-ok {
     width: 100%;
     max-width: 250px;
@@ -64,7 +59,6 @@
     transform: scale(1.02);
 }
 
-/* Icon Styles */
 .success-icon {
     width: 80px;
     height: 80px;
