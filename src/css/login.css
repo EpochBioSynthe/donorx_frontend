@@ -1,6 +1,6 @@
-/* src/css/feedback.css */
+/* src/css/login.css */
 
-.feedback-page {
+.login-page {
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -9,20 +9,20 @@
     min-height: 80vh;
 }
 
-.feedback-form {
-    max-width: 650px;
+.login-form {
+    max-width: 500px; /* Login එක සඳහා පළල මදක් අඩු කළා */
     width: 100%;
     margin: 0 auto;
 }
 
-.feedback-page .form-description {
+.login-page .form-description {
     text-align: center;
     font-size: 1.2rem;
     color: #000;
     margin-bottom: 24px;
 }
 
-.feedback-page .form-box {
+.login-page .form-box {
     background: #E9C3E2 !important; 
     padding: 24px;
     border-radius: 8px; 
@@ -32,7 +32,7 @@
     box-sizing: border-box;
 }
 
-.feedback-page .section-title {
+.login-page .section-title {
     font-size: 1.1rem;
     font-weight: 540;
     margin-bottom: 1.5rem;
@@ -43,7 +43,7 @@
     text-align: center;
 }
 
-.feedback-page .form-box label {
+.login-page .form-box label {
     display: block;
     font-size: 13px;
     margin-bottom: 4px;
@@ -52,8 +52,7 @@
     text-align: left;
 }
 
-.feedback-page .form-box input, 
-.feedback-page .form-box textarea {
+.login-page .form-box input {
     width: 100%;
     padding: 10px 12px;
     margin-bottom: 16px;
@@ -64,17 +63,26 @@
     box-sizing: border-box;
 }
 
-.feedback-page .btn-1 {
+/* --- UPDATED BUTTON SIZE --- */
+.login-page .btn-1 {
     background: #B03576 !important; 
     color: white !important;
     border: none;
-    padding: 12px 25px;
+    padding: 10px 40px; /* උස සහ පළල පාලනය කිරීමට padding වෙනස් කළා */
     border-radius: 8px; 
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s;
+    width: auto; /* සම්පූර්ණ පළල වෙනුවට auto ලෙස වෙනස් කළා */
+    min-width: 110px; /* බොත්තම ඉතා කුඩා වීම වැළැක්වීමට අවම පළලක් ලබා දුන්නා */
 }
 
-.feedback-page .btn-1:hover {
+.login-page .btn-1:hover {
     background: #7a2b7a !important;
+}
+
+.login-page .button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }

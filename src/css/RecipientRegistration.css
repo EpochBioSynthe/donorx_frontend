@@ -1,6 +1,6 @@
 /* RecipientRegistration.css */
 
-/* --- Variables (ප්‍රධාන වර්ණ RecipientRegistration.css තුළ නැවත නිර්වචනය නොකර, ඔබගේ App.css/index.css වෙතින් උරුම විය යුතුය. ) --- */
+/* --- Variables --- */
 /* ඔබගේ ප්‍රධාන CSS වලින් වර්ණ ගෙන ඇති බව උපකල්පනය කරමි:
    --primary: #7a2b7a;
    --bg: #f6f3f7; 
@@ -9,24 +9,20 @@
 
 /* 1. Recipient Registration පිටුවේ ප්‍රධාන container එක */
 .recipient-registration-page {
-    /* ඔබගේ RecipientRegistration component එකේ ඇති
-       <div className="form-container" style={{maxWidth: 1000, margin: '0 auto'}}>
-       වෙනුවට මෙම පන්තිය භාවිතා කරන්න. 
-    */
     display: flex;
     flex-direction: column;
-    align-items: center; /* පෝරම මධ්‍යගත කිරීමට */
+    align-items: center; 
     padding: 28px;
-    background: var(--bg, #f6f3f7); /* පොදු background එක */
+    background: var(--bg, #f6f3f7); 
 }
 
 /* 2. පොදු form box එක (Registration, Clinical, Matching සඳහා) */
 .form-box {
     background: #E9C3E2!important;
-    padding: 24px; /* තරමක් වැඩි කළා */
-    border-radius: 8px; /* සුළු වටකුරු දාර */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* මදක් වැඩි කළ සෙවනැල්ල */
-    max-width: 450px; /* පෝරමයේ පළල සීමා කිරීම */
+    padding: 24px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    max-width: 450px; 
     width: 130%;
     margin-bottom: 24px;
     margin: 0 auto 24px auto;
@@ -38,7 +34,6 @@
     padding-bottom: 10px;
     margin-top: 0;
     margin-bottom: 20px;
-    
 }
 
 .section-title{
@@ -51,10 +46,11 @@
     border-radius: 4px;
     text-align: center;
 }
+
 /* 3. Input fields */
 .form-box label {
     display: block;
-    font-size: 13px; /* තරමක් විශාල කළා */
+    font-size: 13px; 
     margin-bottom: 4px;
     color: black!important;
     font-weight: 535;
@@ -65,13 +61,13 @@
 .form-box select {
     width: 100%;
     padding: 10px 12px;
-    margin-bottom: 16px; /* ඉන්පුට් අතර පරතරය */
+    margin-bottom: 16px; 
     border: 1px solid #d9d9d9;
     border-radius: 6px;
     font-size: 12px;
     transition: border-color 0.3s;
-    
 }
+
 .file{
     background-color: white;
 }
@@ -81,22 +77,22 @@
     outline: none;
 }
 
-/* 4. Buttons */
+/* 4. Buttons - UPDATED TO MATCH FEEDBACK STYLE */
 .btn-1 {
-    background: #B03576 !important;
-    color: white;
+    background: #B03576 !important; /* Feedback submit button color */
+    color: white !important;
     border: none;
-    padding: 12px 20px; /* බොත්තම් තරමක් විශාල කළා */
+    padding: 12px 25px; 
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s;
-    text-decoration: none; /* Link එකක් තුළ තිබේ නම් */
+    text-decoration: none; 
     display: inline-block;
 }
 
-.btn:hover {
-    background: #6a216a; /* තද දම් පාට */
+.btn-1:hover {
+    background: #7a2b7a !important; /* Feedback hover color */
 }
 
 /* Matching and Consent Section Specific Styles */

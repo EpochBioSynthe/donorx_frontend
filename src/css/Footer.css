@@ -2,15 +2,15 @@
 
 /* --------------------- FOOTER MAIN STRUCTURE --------------------- */
 .site-footer {
-    background-color: #551D68!important; /* ගැඹුරු දම් පැහැය */
+    background-color: #551D68 !important; /* ගැඹුරු දම් පැහැය */
     color: white;
-    padding: 25px 20px 0 !important; /* */
+    padding: 25px 20px 0 !important;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    overflow-x: hidden; /* දෙපසට පැනීම වැළැක්වීමට මෙය වැදගත් වේ */
+    overflow-x: hidden;
 }
 
 /* --------------------- FOOTER COLUMNS --------------------- */
@@ -69,17 +69,24 @@
     height: 25px;
 }
 
+/* --- UPDATED REGISTER BUTTON (FEEDBACK STYLE) --- */
 .footer-register-btn {
-    background-color: #6C3483;
-    color: white;
+    background-color: #B03576 !important; /* Feedback Submit Button Color */
+    color: white !important;
     padding: 8px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Feedback Button Radius */
     font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     transition: 0.3s;
+}
+
+.footer-register-btn:hover {
+    background-color: #7a2b7a !important; /* Feedback Hover Color */
+    transform: translateY(-2px);
 }
 
 /* --------------------- CONTACT INFO --------------------- */
@@ -97,7 +104,6 @@
     filter: invert(100%);
 }
 
-/* --------------------- COPYRIGHT BAR (UPDATED) --------------------- */
 /* --------------------- COPYRIGHT BAR --------------------- */
 .copyright-bar {
     background-color: black;
@@ -105,13 +111,10 @@
     text-align: center;
     padding: 15px 0;
     font-size: 12px;
-    
-    /* කළු බාර් එක දෙපසටම විහිදුවීමට ඇති ආරක්ෂිතම ක්‍රමය */
-    width: 110%;              /* Container එකට වඩා පළල වැඩිකරයි */
-    margin-left: -5%;         /* වම් පැත්තේ padding එක වසා ගනී */
-    margin-right: -5%;        /* දකුණු පැත්තේ padding එක වසා ගනී */
-    
-    margin-top: 15px;         
+    width: 110%;
+    margin-left: -5%;
+    margin-right: -5%;
+    margin-top: 15px;
     margin-bottom: 0 !important;
     position: relative;
     display: block;

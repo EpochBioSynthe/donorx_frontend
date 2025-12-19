@@ -6,10 +6,10 @@
     background-color: #7b1fa2; /* තද දම් පැහැය */
     width: 100%;
     box-sizing: border-box;
-    position: sticky;
+    position: fixed; 
     top: 0;
+    left: 0; 
     z-index: 1000;
-
 }
 
 .logo-image {
@@ -33,14 +33,23 @@
     gap: 15px;
 }
 
+/* --- UPDATED BUTTON STYLE --- */
 .btn {
-    padding: 8px 18px;
-    border-radius: 5px;
-    border: none;
+    padding: 10px 22px;
+    border-radius: 10px; /* පින්තූරයේ පරිදි මදක් වටකුරු කර ඇත */
+    border: 1.5px solid white; /* සුදු පැහැති බෝඩරය */
     cursor: pointer;
     font-weight: bold;
     color: white;
+    background-color: #d81b60; /* පින්තූරයේ ඇති තද දම් පැහැය */
+    text-transform: uppercase; /* අකුරු සියල්ල Capital කිරීමට */
+    transition: 0.3s;
 }
 
-.signup-btn { background-color: #d81b60; }
-.login-btn { background-color: transparent; border: 1px solid white; }
+.btn:hover {
+    background-color: #4a148c; /* Mouse එක උඩට ගිය විට තද පැහැය */
+}
+
+/* බොත්තම් දෙකම සමාන නිසා මේවායේ background-color ඉවත් කළ හැක */
+.signup-btn { }
+.login-btn { }

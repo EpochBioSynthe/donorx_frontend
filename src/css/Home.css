@@ -72,7 +72,7 @@ body, html {
 
 .btn {
     padding: 12px 24px;
-    border-radius: 25px;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
     font-weight: 600;
