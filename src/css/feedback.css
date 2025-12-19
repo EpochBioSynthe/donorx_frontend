@@ -63,14 +63,15 @@
 }
 
 .feedback-page .btn-1 {
-    background: #B03576 !important; 
-    color: white !important;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px; 
+    padding: 10px 22px;
+    border-radius: 10px;
+    border: 1.5px solid white;
     cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    color: white;
+    background-color: #B03576;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
 .feedback-page .btn-1:hover {

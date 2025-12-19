@@ -77,8 +77,36 @@ body, html {
     
 }
 
-.btn.primary { background: #632B61; color: white; border: 1px solid white; }
-.btn.outline { background: #632B61; color: white; border: 1px solid white; }
+.btn.primary { 
+    padding: 10px 22px;
+    border-radius: 10px;
+    border: 1.5px solid white;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #632B61;
+    text-transform: uppercase;
+    transition: 0.3s; 
+}
+.btn.outline { 
+    padding: 10px 22px;
+    border-radius: 10px;
+    border: 1.5px solid white;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #632B61;
+    text-transform: uppercase;
+    transition: 0.3s; 
+ }
+
+ .btn.primary:hover {
+    background:  #B03576 !important;
+}
+
+.btn.outline:hover {
+    background: #B03576 !important;
+}
 
 .aim-bar {
     background-color:#A47DAB;

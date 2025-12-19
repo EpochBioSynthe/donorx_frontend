@@ -48,16 +48,15 @@
 }
 
 .contact-us-page .btn-1 {
-    background: #B03576 !important;
-    color: white !important;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px; 
+    padding: 10px 22px;
+    border-radius: 10px;
+    border: 1.5px solid white;
     cursor: pointer;
-    font-weight: 600;
-    font-size: 14px;
-    transition: background-color 0.3s;
-    width: 20%; 
+    font-weight: bold;
+    color: white;
+    background-color: #B03576;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
 .contact-us-page .btn-1:hover {
