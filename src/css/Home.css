@@ -138,7 +138,6 @@ body, html {
     transform: scale(1.05);
 }
 
-/* --------------------- STATS SECTION --------------------- */
 .stats {
     display: flex;
     padding: 80px 10%;
@@ -171,7 +170,6 @@ body, html {
     margin-bottom: 30px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .hero-section { height: 400px; }
     .stats-left { font-size: 24px; text-align: center; }
