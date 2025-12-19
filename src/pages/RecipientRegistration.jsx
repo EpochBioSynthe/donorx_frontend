@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; // useNavigate import කර ඇත
-import '../css/RecipientRegistration.css'; // CSS ගොනුව ආයාත කර ඇත.
-// SuccessMessage.jsx තවදුරටත් අවශ්‍ය නැත.
+import { Link, useNavigate } from "react-router-dom"; 
+import '../css/RecipientRegistration.css'; 
 import Navbar from '../components/Navbar';
 import '../css/Navbar.css';
 export default function RecipientRegistration(){
-    // useNavigate hook එක භාවිතා කිරීම
+  
     const navigate = useNavigate();
 
-    // State නිර්වචනය
     const [data, setData] = useState({
          fullname:"", 
          age:"",
@@ -26,9 +24,6 @@ export default function RecipientRegistration(){
          agree:false
     });
 
-    // Success Popup State එක දැන් අවශ්‍ය නැත, නමුත් ඉවත් නොකරමු.
-    // const [showSuccess, setShowSuccess] = useState(false); 
-
     function handleChange(e){
         const { name, value, type, checked,files } = e.target;
             setData({
@@ -40,14 +35,11 @@ export default function RecipientRegistration(){
     function handleSubmit(e){
         e.preventDefault();
 
-        // Validation: Terms and Conditions Checkbox
         if (!data.agree) {
         alert("Please agree to the terms and conditions.");
         return;
         }
 
-         // සාර්ථක වූ පසු වෙනම පිටුවකට යොමු කිරීම
-        // ඔබගේ App.js/Router file එකේ /registration-success route එක නිර්මාණය කළ යුතුය.
         navigate('/registration-success'); 
     }
 
@@ -56,7 +48,6 @@ export default function RecipientRegistration(){
 
             <form onSubmit={handleSubmit}>
 
-                {/*  Recipient Registration */}
                 <div className="form-box">
                     <h2 className="section-title">Recipient Registration</h2>
                     
@@ -112,8 +103,6 @@ export default function RecipientRegistration(){
                                 </select>
                 </div>
 
-                {/*Organ request submission*/}
-
                 <div className="form-box">
                     <h2 className="section-title">Organ Request Submission</h2>
                     <label>Required Organ</label>
@@ -143,7 +132,6 @@ export default function RecipientRegistration(){
                     
                 </div>
 
-                {/* request status */}
                 <div className="form-box">
                     <h2 className="section-title">Request Status Tracking</h2>
                     <label>Request ID</label>
@@ -183,9 +171,7 @@ export default function RecipientRegistration(){
                 </div>
             
             </form>
-            
-            {/* Success Popup එකට අදාළ කේතය (showSuccess && ...) ඉවත් කර ඇත, 
-               මන්ද අපි වෙනම පිටුවකට navigate වන නිසා. */}
+   
     </div>
     );
 }

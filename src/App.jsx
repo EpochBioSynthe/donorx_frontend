@@ -15,7 +15,6 @@ import ContactUs from "./pages/ContactUs";
 import Profile from "./pages/Profile";
 import RegistrationSuccess from './pages/RegistrationSuccess';
 
-// Layout with Navbar and Footer
 function NavbarLayout() {
   return (
     <>
@@ -28,7 +27,6 @@ function NavbarLayout() {
   );
 }
 
-// Layout without Navbar and Footer
 function NoNavbarLayout() {
   return (
     <main className="main-content">
@@ -42,7 +40,7 @@ function App() {
     <Router>
       <div className="app">
         <Routes>
-          {/* Normal Pages */}
+   
           <Route element={<NavbarLayout />}> 
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
@@ -55,7 +53,6 @@ function App() {
             <Route path="/profile" element={<Profile />} />
           </Route>
 
-          {/* Success Page Only */}
           <Route element={<NoNavbarLayout />}>
             <Route path="/registration-success" element={<RegistrationSuccess />} />
           </Route>

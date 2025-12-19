@@ -72,7 +72,6 @@ export default function Feedback(){
                     />
                     
                     <div className="button-group">
-                        {/* btn-1 ලෙස පන්තිය නිවැරදි කර ඇත */}
                         <button className="btn-1" type="submit">Submit</button>
                     </div>
                 </div>

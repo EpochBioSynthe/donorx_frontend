@@ -6,12 +6,8 @@ export default function RegistrationSuccess() {
     return (
         <div className="success-page-wrapper">
             <div className="registration-success-page"> 
-
-                {/* 🟣 මධ්‍යයේ ඇති විශාල Purple Card එක */}
                 <div className="success-box-container">
-                    
-                    {/* ⚪ දම් පාට Card එක ඇතුළත ඇති සුදු සාර්ථක පණිවිඩ පෙට්ටිය */}
-                    <div className="white-success-box">
+                      <div className="white-success-box">
                         <div className="success-icon">
                             <span className="checkmark-symbol">✓</span> 
                         </div>

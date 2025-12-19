@@ -5,9 +5,7 @@ import '../css/Home.css';
 export default function Home() {
   return (
     <div className="home-page">
-      
-      {/* 1. HERO SECTION */}
-      <section className="hero-section">
+        <section className="hero-section">
         <img src="/assets/banner.png" alt="Banner" className="hero-bg-img" /> 
         <div className="hero-content container">
           <div className="hero-right">
@@ -19,17 +17,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. AIM BAR */}
       <div className="aim-bar">
         OUR AIM IS TO INSPIRE AND SUPPORT LIFE SAVING ORGAN DONATION
       </div>
 
-      {/* 3. ABOUT US SECTION - ID එක මෙහි එක් කර ඇත */}
       <section className="about-section" id="about-us-section">
         <img src="/assets/bannertwo.png" alt="About Us" className="about-image" />
       </section>
 
-      {/* 4. OUR SERVICES SECTION */}
       <section className="services">
         <h3 className="section-title-h">OUR SERVICES</h3>
         <div className="services-row">
@@ -40,7 +35,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. STATS SECTION */}
       <section className="stats">
         <div className="stats-left">
           <p>Every year, more than <span className="highlight">10,000</span></p>

@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Redirect කිරීම සඳහා මෙය අවශ්‍ය වේ
+import { useNavigate } from "react-router-dom"; 
 import '../css/login.css'; 
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); // navigate function එක සාදා ගැනීම
+  const navigate = useNavigate(); 
 
   function handleSubmit(e) {
     e.preventDefault();
     
-    // සාර්ථකව Login වූ පසු Success පිටුවට යොමු කරයි
-    // ඔබ App.jsx හි ලබා දී ඇති path එක වන "/registration-success" මෙහි භාවිතා කර ඇත
     navigate("/registration-success"); 
   }
 

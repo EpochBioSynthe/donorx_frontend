@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Redirect කිරීම සඳහා මෙය අවශ්‍ය වේ
+import { useNavigate } from "react-router-dom";
 import '../css/signup.css'; 
 
 export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const navigate = useNavigate(); // navigate function එක සාදා ගැනීම
+  const navigate = useNavigate(); 
 
   function handleSubmit(e) {
     e.preventDefault();
-    
-    // මෙහිදී alert එක ඉවත් කර කෙලින්ම Success පිටුවට යොමු කරයි
-    // ඔබ App.jsx හි සාදා ඇති path එක මෙහි ඇතුළත් කරන්න
+   
     navigate("/registration-success"); 
   }
 

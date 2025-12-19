@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../css/ContactUs.css'; // අලුත් CSS ගොනුව මෙතැනින් import කරන්න
+import '../css/ContactUs.css'; 
 
 export default function ContactUs() {
   const [name, setName] = useState("");

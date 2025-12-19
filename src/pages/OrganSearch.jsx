@@ -1,4 +1,3 @@
-// src/pages/OrganSearch.jsx
 import React, { useState } from 'react';
 import '../css/OrganSearch.css';
 
@@ -31,7 +30,6 @@ const OrganSearch = () => {
   return (
     <div className="main-app-container">
 
-      {/* Part 1 */}
       <div className="organ-search-container">
         <header className="header">
           <h1>Organ Search</h1>
@@ -41,7 +39,6 @@ const OrganSearch = () => {
           <form onSubmit={handleSearch}>
             <div className="form-grid">
 
-              {/* --- Organ Type --- */}
               <div className="form-group">
                 <label htmlFor="organType">Organ Type</label>
                 <select 
@@ -57,7 +54,6 @@ const OrganSearch = () => {
                 </select>
               </div>
 
-              {/* --- Blood Type --- */}
               <div className="form-group">
                 <label htmlFor="bloodType">Blood Type</label>
                 <select 
@@ -73,7 +69,6 @@ const OrganSearch = () => {
                 </select>
               </div>
 
-              {/* --- Donor Status --- */}
               <div className="form-group">
                 <label htmlFor="donorStatus">Donor Status</label>
                 <select 
@@ -89,7 +84,6 @@ const OrganSearch = () => {
                 </select>
               </div>
 
-              {/* --- Location --- */}
               <div className="form-group">
                 <label htmlFor="location">Location / Hospital</label>
                 <select 
@@ -117,7 +111,6 @@ const OrganSearch = () => {
         </div>
       </div>
 
-      {/* Part 2 */}
       <div className="advanced-filters-row">
         <div className="advanced-card">
           <h3>Advanced Filters</h3>
@@ -130,7 +123,6 @@ const OrganSearch = () => {
         </div>
       </div>
 
-      {/* Part 3 */}
       <section className="summary">
         <div className="summary_img">
           <img 
@@ -141,7 +133,6 @@ const OrganSearch = () => {
         </div>
       </section>
 
-      {/* Part 4 */}
       <div className="why-use-container">
         <div className="why-use-box">
           <h2>Why Use Our Organ Search System?</h2>
