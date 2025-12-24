@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/donorx_frontend/static/css/main.2517a479.css",
+    "main.js": "/donorx_frontend/static/js/main.52851eca.js",
+    "static/media/suscce_bi.png": "/donorx_frontend/static/media/suscce_bi.efd6b88f7adf9fe88fb0.png",
+    "index.html": "/donorx_frontend/index.html",
+    "main.2517a479.css.map": "/donorx_frontend/static/css/main.2517a479.css.map",
+    "main.52851eca.js.map": "/donorx_frontend/static/js/main.52851eca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2517a479.css",
+    "static/js/main.52851eca.js"
+  ]
+}
